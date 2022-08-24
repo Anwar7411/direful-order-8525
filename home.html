@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document/Autoplay_Navigation</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #slider{
+
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        #slide_images{
+            display: flex;
+            width: 500%;
+            height: 200px;
+        }
+        #slide_images input{
+            display:none;
+        }
+        .img{
+            width: 20%;
+            transition: 2s;
+        }
+        .img img{
+            width: 800px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <div id="slide_images">
+
+            <input type="radio" id="r1">
+            <input type="radio" id="r2">
+            <input type="radio" id="r3">
+            <input type="radio" id="r4">
+            <input type="radio" id="r5">
+            <input type="radio" id="r6">
+            <input type="radio" id="r7">
+            <input type="radio" id="r8">
+
+            <div class="img">
+                <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_390723769_4_7_3024x.jpg?v=1660348351" alt="">
+            </div>
+            <div class="img">
+                <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_442324294_3024x.jpg?v=1660338965" alt="">
+            </div>
+           <div class="img">
+            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_1161591199_3024x.jpg?v=1660339761">
+           </div>
+           <div class="img">
+            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_773947222_97e3ce6e-89fa-4a0f-a5d5-d0d373ae995e_3024x.jpg?v=1660340662"> 
+           </div>
+           <div class="img">
+            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_1207523875_3024x.jpg?v=1660338294"> 
+           </div>
+           <div class="img">
+            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_2056290722_3024x.jpg?v=1660337209"> 
+           </div>
+           <div class="img">
+            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_324325775_1_3024x.jpg?v=1660337720"> 
+           </div>
+           <div class="img">
+            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_1464509732_1_3024x.jpg?v=1660342703"> 
+           </div>
+
+           <div id="auto_nav">
+             <div class="btn1"></div>
+             <div class="btn2"></div>
+             <div class="btn3"></div>
+             <div class="btn4"></div>
+             <div class="btn5"></div>
+             <div class="btn6"></div>
+             <div class="btn7"></div>
+             <div class="btn8"></div>
+           </div>
+           
+            
+        </div>
+        
+    </div>
+</body>
+</html>
