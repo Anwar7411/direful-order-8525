@@ -9,88 +9,76 @@
         body{
             margin: 0px;
             padding: 0px;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
-
-        #slider{
-
+        #main{
             width: 100%;
-            height: 200px;
-            overflow: hidden;
+            height: 500px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            
         }
-        #slide_images{
-            display: flex;
-            width: 500%;
-            height: 200px;
+        #slider{
+            width: 100%;
+            height: 500px;
         }
-        #slide_images input{
-            display:none;
+        #left #right{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
         }
-        .img{
-            width: 20%;
-            transition: 2s;
+        #right {
+            right: 0;
+            border-radius: 3px 0 0 3px;
         }
-        .img img{
-            width: 800px;
-            height: 400px;
+        #left:hover, #right:hover {
+            background-color: rgba(0,0,0,0.8);
         }
     </style>
 </head>
 <body>
-    <div id="slider">
-        <div id="slide_images">
 
-            <input type="radio" id="r1">
-            <input type="radio" id="r2">
-            <input type="radio" id="r3">
-            <input type="radio" id="r4">
-            <input type="radio" id="r5">
-            <input type="radio" id="r6">
-            <input type="radio" id="r7">
-            <input type="radio" id="r8">
-
-            <div class="img">
-                <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_390723769_4_7_3024x.jpg?v=1660348351" alt="">
-            </div>
-            <div class="img">
-                <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_442324294_3024x.jpg?v=1660338965" alt="">
-            </div>
-           <div class="img">
-            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_1161591199_3024x.jpg?v=1660339761">
-           </div>
-           <div class="img">
-            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_773947222_97e3ce6e-89fa-4a0f-a5d5-d0d373ae995e_3024x.jpg?v=1660340662"> 
-           </div>
-           <div class="img">
-            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_1207523875_3024x.jpg?v=1660338294"> 
-           </div>
-           <div class="img">
-            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_2056290722_3024x.jpg?v=1660337209"> 
-           </div>
-           <div class="img">
-            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_324325775_1_3024x.jpg?v=1660337720"> 
-           </div>
-           <div class="img">
-            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/shutterstock_1464509732_1_3024x.jpg?v=1660342703"> 
-           </div>
-
-           <div id="auto_nav">
-             <div class="btn1"></div>
-             <div class="btn2"></div>
-             <div class="btn3"></div>
-             <div class="btn4"></div>
-             <div class="btn5"></div>
-             <div class="btn6"></div>
-             <div class="btn7"></div>
-             <div class="btn8"></div>
-           </div>
-           
-            
+    <div id="main">
+    
+        <img id="slider" src="img1.webp" alt="">
+        <div id="btn">
+            <a id="left" href="#">❮</a>
+            <a id="right" href="#">❯</a>
         </div>
-        
+
     </div>
 </body>
 </html>
+<script>
+    let imagelink = [
+    "img1.webp", "img2.webp", "img3.webp","img4.webp","img5.webp","img6.webp", "img7.webp", "img8.webp"
+  ]
+  let leftbtn = document.getElementById("left");
+  let rightbtn = document.getElementById("right");
+  let slider = document.getElementById("slider");
+
+  let imagestate = 0;
+  rightbtn.addEventListener("click", function () {
+    imagestate++;
+    if(imagestate===imagelink.length){
+      imagestate=0;
+    }
+    slider.src = imagelink[imagestate];
+  })
+
+  leftbtn.addEventListener("click", function () {
+    imagestate--;
+    if(imagestate<0){
+      imagestate=imagelink.length-1;
+    }
+    slider.src = imagelink[imagestate];
+  })
+
+</script>
