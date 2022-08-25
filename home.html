@@ -5,100 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document/Autoplay_Navigation</title>
-    <style>
-        body{
-            margin: 0px;
-            padding: 0px;
-        }
-        #main{
-            width: 100%;
-            height: 500px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-            
-        }
-        #slider{
-            width: 100%;
-            height: 500px;
-        }
-        #left #right{
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
-        #right {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        #left:hover, #right:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-        #offer_tag{
-            width: 95%;
-            margin: auto;
-            display: flex;
-            grid-template-columns: repeat(3,1fr);
-            gap: 20px;
-            margin-top: 5%;
-            padding-top: 1%;
-            padding-bottom: 1%;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-        }
-        #offer_tag img{
-            width: 450px;
-            height: 100%;
-        }
-        h1{
-            text-align: center;
-            font-family: Tiemann,serif;
-            font-weight: 400;
-            letter-spacing: 0em;
-            line-height: 1;
-            text-transform: uppercase;
-        }
-        #cat{
-            width: 95%;
-            margin: auto;
-            display: grid;
-            gap:20px;
-            grid-template-columns: repeat(5,1fr);
-        }
-        #cat div{
-            text-align: center;
-        }
-        #cat img{
-            width: 60%;
-            height: 50%;
-        }
-        #cat p{
-            text-transform: uppercase;
-            font-size: .8em;
-            letter-spacing: .2em;
-        }
-        #new_arrivals{
-            width: 95%;
-            margin: auto;
-            display: grid;
-            gap:20px;
-            grid-template-columns: repeat(5,1fr);
-        }
-        #new_arrivals div{
-            text-align: center;
-        }
-        #new_arrivals p, #new_arrivals span{
-            text-transform: uppercase;
-            font-size: .8em;
-            letter-spacing: .2em;
-        }
-    </style>
+    <link rel="stylesheet" href="./home.css" />
 </head>
 <body>
 
@@ -168,7 +75,10 @@
         </div>
     </div>
     <h1>New Arrivals</h1>
-    <button onclick="view_arrival()">VIEW ALL</button>
+    <div id="container">
+        <button onclick="view_arrival()">VIEW ALL</button>
+    </div>
+    
     <div id="new_arrivals">
         <div>
             <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313381151_RLLZ_1_180x.jpg?v=1661238774">
@@ -210,31 +120,49 @@
              <span style="color: red;">Save 21%</span>
         </div>
     </div>
+    <h1>TRENDING NOW</h1>
+    <div id="container"><button onclick="view_trending()">VIEW ALL</button></div>
+    
+    <div id="trending_now">
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1311726855_RLLZ_1_180x.jpg?v=1641646938">
+            <p>STUART WEITZMAN GILLIAN 60 LEATHER BOOT</p>
+            <span>$795 from </span>
+            <span>$479.99</span>
+            <span style="color: red;">Save 66%</span>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/products/wtlliMyyv3hcuS7RGVS0VZojPouPYfsw-25_540x.jpg?v=1607399172">
+            <p>ROXY WOMENS DOWN WINTER PUFFER COAT</p>
+            <span>$499 from </span>
+            <span>$248.98</span>
+            <span style="color: red;">Save 50%</span>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1885926_540x.jpg?v=1637852303">
+            <p>JACQUEMUS ORANGE 'LE CHIQUITO MINI' CROSSBODY PURSE</p>
+            <span>$550 from</span>
+            <span>490.00</span>
+            <span style="color: red;">Save 11%</span>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1311886735_RLLZ_1_180x.jpg?v=1659878024">
+            <p>STUART WEITZMAN KYE SUEDE SOCK BOOTIE</p>
+            <span>$595 from</span>
+            <span>$279.99</span>
+            <span style="color: red;">Save 53%</span>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1311784202_RLLZ_1_180x.jpg?v=1660360924">
+            <p>STUART WEITZMAN JOCEY SUEDE OVER-THE-KNEE BOOT</p>
+            <span>$795 from </span>
+            <span>267.99</span>
+            <span style="color: red;">Save 66%</span>
+        </div>
+
+    </div>
+
+
 </body>
 </html>
-<script>
-    let imagelink = [
-    "img1.webp", "img2.webp", "img3.webp","img4.webp","img5.webp","img6.webp", "img7.webp", "img8.webp"
-  ]
-  let leftbtn = document.getElementById("left");
-  let rightbtn = document.getElementById("right");
-  let slider = document.getElementById("slider");
-
-  let imagestate = 0;
-  rightbtn.addEventListener("click", function () {
-    imagestate++;
-    if(imagestate===imagelink.length){
-      imagestate=0;
-    }
-    slider.src = imagelink[imagestate];
-  })
-
-  leftbtn.addEventListener("click", function () {
-    imagestate--;
-    if(imagestate<0){
-      imagestate=imagelink.length-1;
-    }
-    slider.src = imagelink[imagestate];
-  })
-
-</script>
+<script src="./home.js"></script>

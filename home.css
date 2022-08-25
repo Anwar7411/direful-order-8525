@@ -1,0 +1,115 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#main{
+    width: 100%;
+    height: 500px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    
+}
+#slider{
+    width: 100%;
+    height: 500px;
+}
+#left #right{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+#right {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+#left:hover, #right:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+#offer_tag{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+#offer_tag img{
+    width: 450px;
+    height: 100%;
+}
+h1{
+    text-align: center;
+    font-family: Tiemann,serif;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+#cat{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    gap:20px;
+    grid-template-columns: repeat(5,1fr);
+}
+#cat div{
+    text-align: center;
+}
+#cat img, #new_arrivals img, #trending_now img{
+
+    width: 60%;
+    height: 50%;
+}
+
+#new_arrivals img:hover, #trending_now img:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+#cat p{
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .2em;
+}
+#new_arrivals,#trending_now{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    gap:20px;
+    grid-template-columns: repeat(5,1fr);
+}
+#new_arrivals div, #trending_now div{
+    text-align: center;
+
+}
+
+#new_arrivals p, #new_arrivals span, #trending_now p, #trending_now span{
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .2em;
+}
+
+#container{  
+    text-align: center;  
+     
+    width: 100%;  
+     
+    padding-bottom: 15px;
+}
+button{
+    border: 1px black solid;
+    background-color: white;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .2em;
+    padding: 10px;
+}
