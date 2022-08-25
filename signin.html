@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        form{
+            width: 500px;
+            height: 300px;
+            margin: auto;
+            margin-top: 60px;
+            gap: 20px;
+        }
+        h1{
+            font-size: 40px;
+            text-align: center;
+            font-family: Tiemann,serif;
+            margin-top: 50px;
+
+        }
+        form label{
+            display: flex;
+            margin-top: 20px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-family: Futura,sans-serif;
+        }
+        form input{
+            width: 100%;
+            height: 30px;
+            padding: 7px;
+        }
+        input[type="button"]{
+            width: 520px;
+            height: 50px;
+            margin-top: 20px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+        #btn{
+            color: black;
+            background-color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: -300px;
+            margin-left: 790px;
+            
+        }
+        #rj{
+            display: flex;
+            justify-content: space-between;
+            width: 103%;
+            font-size: 20px;
+        }
+        #rj>P{
+            font-size: 18px;
+            font-family: Futura,sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>LOGIN</h1>
+    <form>
+        <label>EMAIL</label>
+        <input type="text" id="email">
+        <div id="rj">
+            <label>PASSWORD</label>
+            <p>Forgot password?</p>
+        </div>
+        <input type="text" id="psswrd">
+        <input onclick="signin()" type="button" value="SIGN IN">
+    </form>
+    <a href="./signup.html"><button id="btn">Create account</button></a>
+</body>
+</html>
+
+<script src="./signin.js"></script>
