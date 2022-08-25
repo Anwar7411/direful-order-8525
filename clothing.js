@@ -2,6 +2,7 @@ let slide=document.getElementById('slide');
 let headline=['Welcome To Bluefly:Luxury Brands At Discounted Prices','Free Shiping on Order Over $99'];
 let count=0;
 let h3=document.createElement('h3')
+h3.setAttribute("id","slide_text")
 setInterval(() => {
    if(count==headline.length){
     count=0;
@@ -9,7 +10,7 @@ setInterval(() => {
 h3.innerText=headline[count];
 slide.append(h3);
 count++;
-}, 2000);
+}, 9000);
 let Products=[
     {
       "id": "1",
@@ -314,6 +315,17 @@ let Products=[
       "strike_off": 395.00
     },
     {
+      "id": "51",
+      "Category": "cloth",
+      "gender":"Women",
+      "title": "ELIE TAHARI METALLIC BLAZER",
+      "description": ["Manufacturer: JS Collections","Closure: Hidden Back Zipper","Material: 100% Polyester","Approximately 45In From Shoulder To Hem"],
+      "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1411382701_RLLZ_1_360x.jpg?v=1660404247",
+      "price": 102.99,
+      "strike_off": 395.00
+    },
+
+    {
       "id": "21",
       "Category": "shoes",
       "gender":"Others",
@@ -544,18 +556,44 @@ let Products=[
 main();
 function append(data){
     let cloth=document.getElementById('clothing')
+    cloth.innerHTML=null;
     data.forEach(el => {
         let div=document.createElement('div');
         let img=document.createElement('img');
           img.src=el.image;
-        let head=document.createElement('h3');
+        let head=document.createElement('h4');
            head.innerText=el.title  
-        let price=document.createElement('h3');
-           price.innerText=el.price;
+           head.style.color='#40ace3'
+        let price=document.createElement('h4');
+           price.innerText='$'+Number(el.price)+"         ";
+         let strile_price=document.createElement('del');
+         strile_price.innerText=el.strike_off; 
+         price.append(strile_price)
           div.append(img,head,price)
           cloth.append(div)
     });
 
+}
+function fiter_prod(){
+let sort_val=document.getElementById("sort").value;
+if(sort_val==='All'){
+  return main()
+}
+let filter_data=Products.filter((ele)=>{
+  return ele.gender===sort_val
+})
+append(filter_data);
+}
+
+function fiter_prod_price(){
+  let sort_val=document.getElementById("sort_price").value;
+  if(sort_val==='All'){
+    return main()
+  }
+  let filter_data=Products.filter((ele)=>{
+    return ele.price<=sort_val && ele.Category==='cloth'
+  })
+  append(filter_data);
 }
 
 
