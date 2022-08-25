@@ -11,7 +11,24 @@
     <div id="navbar"></div>
     <div id="slide"></div>
     <h1 id="head_line">All Clothing</h1>
-    <div id="clothing"></div>
+    <div id="container">
+        <div>
+            <select id="sort" multiple="multiple" onchange="fiter_prod()">
+                <option value="All">Sort Based on Gender</option>
+                <option value="Men">Men</option>
+                <option value="Women">Women</option>
+                <option value="Kid">Kid</option>
+            </select>
+            <select id="sort_price" multiple="multiple" onchange="fiter_prod_price()">
+                <option value="All">Sort Based on Price</option>
+                <option value=100>Under $100</option>
+                <option value=500>Under $500</option>
+                <option value=1000>Under $1000</option>
+            </select>
+        </div>
+        <div id="clothing"></div>
+    </div>
+    
 </body>
 </html>
 <script src="clothing.js"></script>
