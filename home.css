@@ -79,11 +79,7 @@ h1{
     height: 50%;
 }
 
-#new_arrivals img:hover, #trending_now img:hover{
-    
-    width: 65%;
-    height: 52%;
-}
+
 
 #cat p{
     text-transform: uppercase;
