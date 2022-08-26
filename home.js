@@ -21,3 +21,20 @@ let imagelink = [
     }
     slider.src = imagelink[imagestate];
   })
+
+  
+  setInterval(function(){   
+    if(imagestate===imagelink.length){
+      imagestate = 0;                
+    } 
+    slider.src = imagelink[imagestate];
+   imagestate++;
+   
+
+},2000);
+function view_arrival(){
+  window.location.href="clothing.html"
+}
+ function view_trending(){
+  window.location.href="clothing.html"
+ }
