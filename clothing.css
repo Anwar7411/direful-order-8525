@@ -4,6 +4,7 @@ background-color: black;
 }
 #slide_text{
     margin: auto;
+    margin-top: 180px;
     color: white;
 padding-top: 10px;
 padding-bottom: 10px;
@@ -45,18 +46,31 @@ animation: slide_text 15s linear infinite;
     padding: 5px;
     font-family: Futura,sans-serif;
     letter-spacing: .025em;
-    font-size: 14px
+    font-size: 14px;
+    cursor: pointer;
+}
+#clothing>div:hover{
+    border: 1px solid black;
+
 }
 #sort_price{
     margin-top: 40px ;
     margin-bottom: 40px;
     font-size: 16px;
+    cursor: pointer;
+   
 }
 #sort{
     font-size: 16px;
+    cursor: pointer;
+    
 }
 del{
  color: #333!important;
     font-size: 15px;
     font-weight: 400;
+}
+#sort_type{
+    font-size: 16px;
+    cursor: pointer;
 }
