@@ -276,11 +276,11 @@
         grid-template-rows: auto;
         grid-template-columns: 1fr 4fr;
         gap: 5px;
-        padding: 35px;
-
+    padding: 35px;
+   
         border-bottom: 1px solid rgb(232, 228, 228);
     }
-
+    
 
     #shoppingmain {
         width: 550px;
@@ -297,7 +297,7 @@
         transition-delay: 2s;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
-
+    
 
     #shoppingmain strong {
         margin-left: 400px;
@@ -325,9 +325,8 @@
         font-size: 16px;
         /* border: 1px solid red; */
     }
-
-    #checkout {
-        margin-top: 200px;
+    #checkout{
+       margin-top: 200px;
     }
 
     #checkout button {
@@ -337,17 +336,15 @@
         padding: 5px 200px;
         margin: 5px;
     }
-
-    #subtotalwa {
-        padding: 0px 25px;
+    #subtotalwa{
+        padding:0px 25px;
         font-weight: 900;
     }
-
-    #para {
+    #para{
         padding: 0px 25px;
     }
-</style>
 
+</style>
 <body>
 
     <div id="container">
@@ -748,8 +745,222 @@
 
 
 
-   
-   
+    function displayrecent(recent_Products) {
+        recent.innerHTML = null;
+        recent_Products.forEach(function (el) {
+            let div = document.createElement("div");
+
+            let image = document.createElement("img");
+            image.src = el.image;
+
+
+            let title = document.createElement("h4");
+            title.innerText = el.title;
+
+            let p = document.createElement("a");
+
+            let percentage = document.createElement("a");
+            percentage.innerHTML = " " + "Save" + " " + Math.ceil(((el.strike_off - el.price) / el.strike_off) * 100) + "%";
+            percentage.style.color = "red";
+
+            let strikeprice = document.createElement("a");
+            strikeprice.innerHTML = "$" + el.strike_off + " ";
+            strikeprice.style.textDecoration = 'line-through';
+
+            let price = document.createElement("a");
+            price.innerHTML = " " + " " + "$" + el.price;
+
+
+            p.appendChild(strikeprice);
+            p.appendChild(price);
+            // $(p).appendChild($(" "));
+            p.appendChild(percentage);
+            div.append(image, title, p);
+            recent.append(div);
+        })
+    }
+
+    displayrecent(recent_Products);
+
+
+    function show() {
+        document.getElementById('image')
+            .style.display = "block";
+
+        document.getElementById('btnid')
+            .style.display = "none";
+    }
+    function showback() {
+        document.getElementById('image')
+            .style.display = "none";
+
+        document.getElementById('btnid')
+            .style.display = "block";
+    }
+
+    function popcart() {
+        document.getElementById("shoppingmain").style.display = "block";
+        showcart();
+    }
+
+    function popback() {
+        document.getElementById("shoppingmain").style.display = "none";
+
+        // showcart();
+    }
+
+
+    let shoppingcart = document.getElementById("shoppingcart");
+    let subtotalwa = document.getElementById("subtotalwa");
+    function showcart() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let size = JSON.parse(localStorage.getItem('size')) || [];
+        let color = JSON.parse(localStorage.getItem('color')) || [];
+        shoppingcart.innerHTML = null;
+
+        
+        cart.forEach(function (el, index) {
+            let totalam =Number(el.price) ;
+            let c = 1;
+
+            let div = document.createElement("div");
+
+
+            let image = document.createElement("img");
+            image.src = el.image;
+
+            let div1 = document.createElement("span");
+            div1.style.marginTop="-30px";
+
+            
+
+            let title = document.createElement("h4");
+            title.innerText = el.title;
+
+            let price = document.createElement("h5");
+            price.innerText = "$" + el.price;
+            let hr = document.createElement("hr");
+
+            let totalamount=document.createElement("span");
+            totalamount.innerText=totalam;
+
+
+            let pro_size = document.createElement("span");
+            pro_size.innerText = size + " ";
+
+            let pro_clr = document.createElement("span");
+            pro_clr.innerText = "|" + " " + color;
+
+            let div2 = document.createElement("span");
+            div2.style.padding = "15px";
+
+            let minus = document.createElement("a");
+            minus.innerText = "-";
+            minus.style.border = "1px solid grey";
+            minus.style.padding = "5px 10px";
+            minus.addEventListener("click", function () {
+                if (c==1) {
+                    //    deletecart(index);
+                    //    console.log("bhag");
+                    totalam = totalam-Number(totalam);
+                    totalamount.innerText=totalam;
+                    console.log(totalam);
+                    count.innerText = c,totalam;
+                    deletecart();
+                } else {
+                    c--;
+                    count.innerText = c,totalam;
+                    totalam = totalam -Number(el.price);
+                    totalamount.innerText=totalam;
+                    console.log(totalam);
+                }
+
+            })
+
+            let count = document.createElement("a");
+            count.style.border = "1px solid grey";
+            count.style.padding = "5px 10px";
+            count.innerText = c;
+
+
+            let plus = document.createElement("a");
+            plus.innerText = "+";
+            plus.style.border = "1px solid grey";
+            plus.style.padding = "5px 10px";
+            plus.addEventListener("click", function () {
+                if (c < 5) {
+                    c++;
+
+                    count.innerText = c,totalam;
+                    totalam = totalam +Number(el.price);
+                    totalamount.innerText=totalam;
+                    console.log(totalam);
+                } else {
+                    count.innerText = c,totalam;
+                    totalam = totalam
+                    totalamount.innerText=totalam;
+                    console.log(totalam);
+                }
+
+            })
+
+           
+           
+
+            // let del = document.createElement("img");
+            // del.src = "https://cdn2.iconfinder.com/data/icons/thin-line-color-1/21/33-512.png";
+            // del.style.width = "25px";
+            // del.style.marginLeft = "101px";
+            // del.addEventListener("click", function (el) {
+            //     deletecart(el);
+
+            // })
+
+            div2.append(minus, count, plus)
+            div1.append(title, price, pro_size, pro_clr, div2);
+            div.append(image, div1);
+            shoppingcart.append(div);
+            subtotalwa.innerHTML = null;
+            subtotalwa.append("SUBTOTAL : ", "$", totalamount);
+
+        })
+    }
+
+    function deletecart(el) {
+        let cartLS = JSON.parse(localStorage.getItem('cart')) || [];
+        let x = cartLS.filter(function (el) {
+            return cartLS.id === el.id;
+        })
+        localStorage.setItem('cart', JSON.stringify(x));
+        showcart();
+        //   window.location.reload();
+
+    }
+
+
+
+
+
+
+
+
+
+    function add() {
+        let adding = [
+            {
+                "id": "2",
+                "Category": "cloth",
+                "gender": "Women",
+                "title": "WOMENS LACE FLORAL EVENING DRESS",
+                "description": ["Manufacturer: BCBGMAXAZRIA", "Material: 100% Polyester", "Fabric Type: Polyester"],
+                "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/eJGeOZ65cTRusiZtduE3OuzXbLRp7aVx-25_360x.jpg?v=1661163613",
+                "price": 155.99,
+                "strike_off": 468.00
+            },
+        ]
+
+        localStorage.setItem('add', JSON.stringify(adding));
+    }
 </script>
 
 </html>
