@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>shoes page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="clothing.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,28 +61,14 @@
     <h1 id="head_line">All Clothing</h1>
     <div id="container">
         <div>
-            <select id="sort" multiple="multiple" onchange="fiter_prod()">
-                <option value="All">Sort Based on Gender</option>
-                <option value="Men">Men</option>
-                <option value="Women">Women</option>
-                <option value="Kid">Kid</option>
-            </select>
             <select id="sort_price" multiple="multiple" onchange="fiter_prod_price()">
                 <option value="All">Sort Based on Price</option>
                 <option value=100>Under $100</option>
                 <option value=500>Under $500</option>
                 <option value=1000>Under $1000</option>
             </select>
-            <select id="sort_type" multiple="multiple" onchange="fiter_prod_type()">
-                <option value="All">Sort Based on Type</option>
-                <option value='T-shirt'>T-shirt</option>
-                <option value='Shirt'>Shirt</option>
-                <option value='Pant'>Pant</option>
-            </select>
         </div>
         <div id="clothing"></div>
-    </div>
-    
 </body>
 </html>
-<script src="clothing.js"></script>
+<script src="shoes.js"></script>
