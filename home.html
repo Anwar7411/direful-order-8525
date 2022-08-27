@@ -197,3 +197,9 @@
 </body>
 </html>
 <script src="./home.js"></script>
+<script type="module">
+    import {navbar,footer} from './navbar.js';
+    let container = document.getElementById("container").innerHTML= navbar()
+
+    let foot = document.getElementById("foot").innerHTML = footer()
+</script>
