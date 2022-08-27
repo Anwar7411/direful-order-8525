@@ -862,7 +862,7 @@ let Products=[
       "strike_off": 85.00
     },
   ]
-
+let head_line=document.getElementById('head_line');
  function main(){
     let data= Products.filter((ele)=>{      
        return ele.Category==='cloth'
@@ -896,11 +896,13 @@ function append(data){
 function fiter_prod(){
 let sort_val=document.getElementById("sort").value;
 if(sort_val==='All'){
+  head_line.innerText=(`${sort_val} Clothing`)
   return main()
 }
 let filter_data=Products.filter((ele)=>{
   return ele.gender===sort_val
 })
+head_line.innerText=(`${sort_val} Clothing`)
 append(filter_data);
 }
 
@@ -922,11 +924,13 @@ function clicked_prod(el){
 function fiter_prod_type(){
   let sort_val=document.getElementById("sort_type").value;
   if(sort_val==='All'){
+    head_line.innerText=(`Mens ${sort_val}`)
     return main()
   }
   let filter_data=Products.filter((ele)=>{
     return ele.type==sort_val
   })
+  head_line.innerText=(`Mens ${sort_val}`)
   append(filter_data);
 }
 

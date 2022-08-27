@@ -21,12 +21,20 @@ animation: slide_text 15s linear infinite;
 }
 #head_line{
     text-align: center;
+    font-family: Tiemann,serif;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 1;
+    text-transform: uppercase;
 }
 #container{
     width: 70%;
     margin: auto;
     display: flex;
     justify-content: space-between;
+}
+#container>div:nth-child(1){
+margin-right: 60px;
 }
 #clothing{
     margin: auto;
@@ -42,11 +50,11 @@ animation: slide_text 15s linear infinite;
 }
 #clothing>div{
     text-align: center;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 5px;
     font-family: Futura,sans-serif;
     letter-spacing: .025em;
-    font-size: 14px;
+    font-size: .8em;
     cursor: pointer;
 }
 #clothing>div:hover{
