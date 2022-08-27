@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        body {
+            color: #545454;
+            background: white;
+            padding-top: 20px;
+            font-size: .8em;
+            letter-spacing: .2em;
+        }
+
+        #tag>img {
+            text-align: center;
+            margin-left: 150px;
+        }
+
+        #main {
+
+            display: flex;
+            height: 600px;
+
+            /* border: 1px solid red; */
+        }
+
+        #left {
+            /* border: 1px solid rgb(255, 0, 157); */
+            height: 200%;
+            width: 50%;
+        }
+
+        #right {
+            /* border: 1px solid green; */
+            height: 200%;
+            width: 50%;
+        }
+
+        #ptag {
+            display: flex;
+            margin-left: 150px;
+            gap: 10px;
+        }
+
+        #ptag>p {
+
+            font-size: 20px;
+            color: black;
+
+        }
+
+        #ptag>a {
+
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+
+        }
+
+        /*--------------------------------------- pay div---------------------------------------------------- */
+
+        #pay {
+            display: flex;
+            gap: 20px;
+            margin-left: 150px;
+
+        }
+
+        #pay>div>img {
+            width: 100px;
+            border-radius: 5px;
+
+        }
+
+        #pay>div:nth-child(3)>img {
+            width: 50px;
+
+        }
+
+        #pay>div:nth-child(2) {
+
+            border-radius: 12;
+        }
+
+        fieldset {
+            width: 65%;
+            margin: auto;
+        }
+
+        legend {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #info {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 120px;
+            margin-top: 30px;
+            margin-right: 120px;
+        }
+
+        #info p {
+            margin-left: 230px;
+            margin-bottom: 45px;
+        }
+
+        #info>a {
+            margin-top: -6px;
+            text-decoration: none;
+            color: #545454;
+        }
+
+        #email {
+            width: 70%;
+            height: 40px;
+            margin-left: 115px;
+
+            /* border-radius: 3%; */
+        }
+
+        #snake {
+            margin-left: 150px;
+            margin-top: 15px;
+            height: 15px;
+            gap: 15px;
+        }
+
+        #ship {
+            margin-left: 120px;
+            width: 70%;
+            /* border: 1px solid red; */
+
+        }
+
+        #ship>select {
+
+            width: 100%;
+            height: 40px;
+            margin-bottom: 12;
+        }
+
+        #ram {
+            width: 48%;
+            height: 40px;
+        }
+
+        #sita {
+            width: 48%;
+            height: 40px;
+        }
+
+        #ram_sita {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        #ship>#address,
+        #room {
+            width: 98.6%;
+            height: 40px;
+            margin-bottom: 12px;
+        }
+
+        #abc {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: .8em;
+            letter-spacing: .2em;
+        }
+
+        #city,
+        #code {
+            width: 31%;
+            height: 40px;
+        }
+
+        #state {
+
+            width: 31%;
+            height: 46px;
+        }
+
+        #fon {
+            width: 98.8%;
+            height: 40px;
+        }
+
+        #corn {
+            margin-bottom: 12px;
+        }
+
+
+
+        #raj {
+            width: 80%;
+            height: 40px;
+        }
+
+        #ramu {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 120px;
+            width: 70%;
+        }
+
+        #ramu a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #back {
+            color: white;
+            background-color: black;
+            height: 50px;
+            font-size: .8em;
+            letter-spacing: .2em;
+        }
+
+        #raju {
+            width: 70%;
+            margin-left: 120px;
+            gap: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #snow {
+            color: white;
+            background-color: #545454;
+            height: 50px;
+            width: 80px;
+            border: none;
+        }
+
+        #peace {
+            height: 45px;
+            width: 50%;
+            font-size: .8em;
+            letter-spacing: .2em;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="left">
+
+            <div id="tag">
+                <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?197908" alt="">
+            </div>
+
+
+            <div id="ptag">
+                <a href="./navbar.html">
+                    <p>cart </p>
+                </a>
+                <a href="./payment.html">
+                    <p>Information </p>
+                </a>
+                <p>Shipping </p>
+                <p>Payment </p>
+
+            </div>
+
+
+            <fieldset>
+                <legend>Express Checkout</legend>
+                <div id="pay">
+                    <div>
+                        <img src="https://www.blubolt.com/wp-content/uploads/2020/02/shop-pay.png" alt="">
+                    </div>
+
+                    <div>
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.eFntJMWiAigLvftXw6GfCwHaBz&pid=Api&P=0" alt="">
+                    </div>
+
+                    <div>
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.wFLZHDYx4JP2yuMPEXSNuAHaC8&pid=Api&P=0" alt="">
+                    </div>
+
+
+                </div>
+            </fieldset>
+            <div id="info">
+
+                <h4>Contact information</h4>
+
+                <p>Already have an account?</p>
+                <a href="./signin.html">
+                    <h4>Log in</h4>
+                </a>
+
+
+            </div>
+            <input type="text" id="email" placeholder="Email">
+            <input id="snake" type="checkbox"><label id="level"> Subscribe to stay updated with new offers!</label>
+
+            <div id="ship">
+                <h4>Shipping address</h4>
+
+
+                <p id="bch">Country/region</p>
+                <select name="" id="corn">
+                    <option value="India">India</option>
+                    <option value="Usa">USA</option>
+                    <option value="Uk">UK</option>
+                </select>
+
+
+                <div id="ram_sita">
+                    <input type="text" id="ram" placeholder="First name">
+                    <input type="text" id="sita" placeholder="Last name">
+                </div>
+
+                <input type="text" id="address" placeholder="Address">
+                <input type="text" id="room" placeholder="Apartment,suite,etc.(optional)">
+                <div id="abc">
+                    <input type="text" id="city" placeholder="City">
+                    <select name="" id="state">
+                        <option value="">state</option>
+                        <option value="bihar">Bihar</option>
+                        <option value="up">UP</option>
+                        <option value="cg">Chhattisgarh</option>
+                    </select>
+                    <input type="text" id="code" placeholder="ZIP code">
+                </div>
+
+                <input type="text" id="fon" placeholder="Phone">
+
+
+            </div>
+
+            <div id="ramu">
+                <a href="">
+                    <h5>Return to cart</h5>
+                </a>
+                <a href=""><button id="back" onclick="ship()">Continue to shipping</button></a>
+            </div>
+
+            <!-- ./shipping.html -->
+
+            <div id="raju">
+                <p>Refund Policy</p>
+                <p>Shipping Policy</p>
+                <p>Privacy policy</p>
+                <p>Terms of services</p>
+
+            </div>
+
+
+
+
+        </div>
+
+        <div id="right">
+
+            <div id="cart">
+                <input type="text" id="peace" placeholder="Gift card or discount code">
+                <button id="snow">Apply</button>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="shipping.js"></script>

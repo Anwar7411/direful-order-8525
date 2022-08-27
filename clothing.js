@@ -920,7 +920,10 @@ function fiter_prod_price(){
 }
 
 function clicked_prod(el){
-  localStorage.setItem("view",JSON.stringify(el))
+  let arr=[];
+  arr.push(el);
+  localStorage.setItem("add",JSON.stringify(arr));
+  window.location.href="./cart.html"
 }
 
 function fiter_prod_type(){
