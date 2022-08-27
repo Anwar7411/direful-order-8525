@@ -11,6 +11,8 @@
             color: #545454;
             background: white;
             padding-top: 20px;
+            font-size: .8em;
+            letter-spacing: .2em;
         }
 
         #tag>img {
@@ -85,7 +87,7 @@
         }
 
         fieldset {
-            width: 70%;
+            width: 65%;
             margin: auto;
         }
 
@@ -169,6 +171,8 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 12px;
+            font-size: .8em;
+            letter-spacing: .2em;
         }
 
         #city,
@@ -207,12 +211,15 @@
         }
         #ramu a{
             text-decoration: none;
+            color: black;
         }
 
         #back {
             color: white;
             background-color: black;
             height: 50px;
+            font-size: .8em;
+            letter-spacing: .2em;
         }
 
         #raju {
@@ -221,6 +228,20 @@
             gap: 5px;
             display: flex;
             justify-content: space-between;
+        }
+        #snow{
+            color: white;
+            background-color: #545454;
+            height: 50px;
+            width: 80px;
+            border: none;
+        }
+        #peace{
+            height: 45px;
+            width: 50%;
+            font-size: .8em;
+            letter-spacing: .2em;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
     </style>
 </head>
@@ -235,10 +256,10 @@
 
 
             <div id="ptag">
-                <a href="./home.html">
+                <a href="./navbar.html">
                     <p>cart </p>
                 </a>
-                <p>Information </p>
+                <a href="./payment.html"><p>Information </p></a>
                 <p>Shipping </p>
                 <p>Payment </p>
 
@@ -316,7 +337,7 @@
                 <a href="">
                     <h5>Return to cart</h5>
                 </a>
-                <button id="back">Continue to shipping</button>
+                <a href="./shipping.html"><button id="back">Continue to shipping</button></a>
             </div>
 
             <div id="raju">
@@ -335,8 +356,8 @@
         <div id="right">
 
             <div id="cart">
-                <input type="text">
-                <button>Apply</button>
+                <input type="text" id="peace" placeholder="Gift card or discount code">
+                <button id="snow">Apply</button>
             </div>
 
 
