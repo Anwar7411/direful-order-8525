@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Baloo+Bhai+2&family=Cabin:wght@400;600&family=Kumbh+Sans:wght@200&family=Open+Sans&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Baloo+Bhai+2&family=Baskervville&family=Cabin:wght@400;600&family=Kumbh+Sans:wght@200&family=Open+Sans&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    * {
+        font-family: 'Kumbh Sans', sans-serif;
+
+        overflow-x: hidden;
+    }
+
+    #container {
+        width: 98%;
+        margin: auto;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 8fr 5fr;
+        gap: 20px;
+    }
+
+
+    #card1 img {
+        width: 90%;
+        border: 2px solid black;
+    }
+
+    #card2 img {
+        width: 100%;
+    }
+
+    #card3_b button {
+        background-color: black;
+        color: white;
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #card3_a h1 {
+        font-family: 'Baskervville', serif;
+        font-weight: 500;
+    }
+
+    #card3_a a {
+        font-size: 22px;
+    }
+
+    #like {
+        width: 98%;
+        margin: 80px auto;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 50px;
+    }
+
+    #like button {
+        display: none;
+    }
+
+    #like img:hover+button {
+        display: block;
+        position: absolute;
+        padding: 10px 80px;
+        background-color: black;
+        color: white;
+        margin-top: -50px;
+
+
+
+
+    }
+
+    #like img {
+        width: 100%;
+        height: 250px;
+        /* border: 1px solid red; */
+    }
+
+    #like h4 {
+        letter-spacing: 2px;
+    }
+
+    #like p {
+        letter-spacing: 2px;
+    }
+
+    #like #per {
+        color: red;
+    }
+
+
+    #recent {
+        width: 98%;
+        margin: 80px auto;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 50px;
+    }
+
+    #recent img {
+        width: 100%;
+        height: 250px;
+        /* border: 1px solid red; */
+    }
+
+    #recent h4 {
+        letter-spacing: 2px;
+    }
+
+    #recent p {
+        letter-spacing: 2px;
+    }
+
+    #recent #per {
+        color: red;
+    }
+
+    #heading {
+        font-family: 'Baskervville', serif;
+        font-weight: 500;
+        text-align: center;
+        margin: 50px 0px;
+    }
+
+    #back {
+        margin: 50px auto 25px 580px;
+        /* margin: 50px auto; */
+
+        background-color: black;
+        color: white;
+        padding: 15px 25px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        font-size: 16px;
+
+    }
+
+    #back a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #image {
+        display: none;
+    }
+
+    #size_guide {
+        margin: 50px;
+    }
+
+    #size {
+        /* border: 1px solid red; */
+        padding: 5px;
+    }
+
+    #size p {
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+    #colour p {
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+    .radioinput {
+        display: none;
+    }
+
+    .radiolabel {
+        background-color: rgb(252, 248, 248);
+        border: 1px solid rgb(209, 207, 207);
+        padding: 10px 15px;
+        margin: 2px;
+        cursor: pointer;
+        transition: background 1s;
+    }
+
+    .radioinput:checked+.radiolabel {
+        background-color: grey;
+        color: white;
+    }
+
+    #colour {
+        /* border: 1px solid red; */
+        padding: 5px 5px 50px 5px;
+    }
+
+    .colradioinput {
+        display: none;
+    }
+
+    .colradiolabel {
+        background-color: rgb(238, 235, 235);
+        border: 1px solid rgb(176, 174, 174);
+        padding: 10px 20px;
+        border-radius: 55px;
+        margin: 5px;
+        cursor: pointer;
+        transition: background 1s;
+    }
+
+    /* .colradioinput:checked+.colradiolabel{
+        border: 4px solid orange;
+    
+      
+    } */
+    .colradioinput+.colradiolabel:nth-of-type(1) {
+        background-color: white;
+    }
+
+    .colradioinput:checked+.colradiolabel:nth-of-type(1) {
+        border: 2px solid black;
+        background-color: rgb(247, 244, 244);
+    }
+
+    .colradioinput+.colradiolabel:nth-of-type(2) {
+
+        background-color: black;
+    }
+
+    .colradioinput:checked+.colradiolabel:nth-of-type(2) {
+        border: 2px solid white;
+        background-color: black;
+    }
+
+    .colradioinput+.colradiolabel:nth-of-type(3) {
+
+        background-color: yellow;
+    }
+
+    .colradioinput:checked+.colradiolabel:nth-of-type(3) {
+        border: 2px solid black;
+        margin: 2px;
+        background-color: yellow;
+    }
+
+    .colradioinput+.colradiolabel:nth-of-type(4) {
+
+        background-color: red;
+    }
+
+    .colradioinput:checked+.colradiolabel:nth-of-type(4) {
+        border: 2px solid black;
+
+        background-color: red;
+    }
+
+
+    #size_main {
+        display: flex;
+        height: 200px;
+
+    }
+
+    #size_guide {
+        position: absolute;
+        right: 20px;
+        top: 350px;
+    }
+
+    #shoppingcart div {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 4fr;
+        gap: 5px;
+        padding: 35px;
+
+        border-bottom: 1px solid rgb(232, 228, 228);
+    }
+
+
+    #shoppingmain {
+        width: 550px;
+        height: auto;
+        display: none;
+        position: absolute;
+        padding: 0px;
+        /* border: 1px solid red; */
+        top: 0px;
+        right: 0px;
+        background-color: white;
+        transition: width 2s;
+        transition-timing-function: linear;
+        transition-delay: 2s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+
+    #shoppingmain strong {
+        margin-left: 400px;
+        padding: 5px;
+
+    }
+
+    #shoppingmain b {
+        font-size: 25px;
+        font-family: 'Baskervville', serif;
+        font-weight: 500;
+        padding: 25px;
+
+    }
+
+    #shoppingcart img {
+        width: 100px;
+        /* border: 1px solid red; */
+    }
+
+    #shoppingcart span {
+        /* position: absolute;
+        top: 80px; */
+        /* padding: 5px; */
+        font-size: 16px;
+        /* border: 1px solid red; */
+    }
+
+    #checkout {
+        margin-top: 200px;
+    }
+
+    #checkout button {
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        padding: 5px 200px;
+        margin: 5px;
+    }
+
+    #subtotalwa {
+        padding: 0px 25px;
+        font-weight: 900;
+    }
+
+    #para {
+        padding: 0px 25px;
+    }
+
+    @media screen and (min-width:650px) and (max-width:1024px) {
+
+        #container {
+            width: 98%;
+            margin: auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 3fr 5fr;
+            gap: 20px;
+        }
+
+        #back {
+            margin: 50px 250px;
+            background-color: black;
+            color: white;
+            padding: 15px 25px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            font-size: 16px;
+
+        }
+
+        #like {
+            width: 98%;
+            margin: 80px auto;
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+
+        #recent {
+            width: 98%;
+            margin: 80px auto;
+            display: grid;
+            grid-template-rows: repeat(2, auto);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+
+
+    }
+
+    @media screen and (min-width:320px) and (max-width:650px) {
+
+        #container {
+            width: 98%;
+            margin: auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 0fr 3fr 5fr;
+            gap: 20px;
+        }
+
+        #back {
+            margin: 50px 150px;
+            background-color: black;
+            color: white;
+            padding: 15px 25px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            font-size: 16px;
+
+        }
+
+        #like {
+            width: 98%;
+            margin: 80px auto;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+        #recent {
+            width: 98%;
+            margin: 80px auto;
+            display: grid;
+            grid-template-rows: repeat(3, auto);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+
+    }
+</style>
+
+<body>
+
+    <div id="container">
+        <div id="card1"></div>
+        <div id="card2"></div>
+        <div id="card3-main">
+
+            <div id="card3_a"></div>
+            <hr>
+            <div id="size_main">
+                <div id="size">
+
+                    <p>SIZE</p>
+
+                    <p> (Please reference sizing images on a product if available; if unavailable please use our size
+                        and conversion guide for proper sizing.)</p>
+                    <br>
+                    <input class="radioinput" type="radio" id="xs" value="Extra Small" name="size" placeholder="XS">
+                    <label class="radiolabel" onclick="xs()" for="xs">XS</label>
+                    <input class="radioinput" type="radio" id="s" value="Small" name="size" placeholder="S">
+                    <label class="radiolabel" onclick="s()" for="s">S</label>
+                    <input class="radioinput" type="radio" id="m" value="Medium" name="size" placeholder="M">
+                    <label class="radiolabel" onclick="m()" for="m">M</label>
+                    <input class="radioinput" type="radio" id="l" value="Lage" name="size" placeholder="L">
+                    <label class="radiolabel" onclick="l()" for="l">L</label>
+                    <input class="radioinput" type="radio" id="xl" value="Extra Large" name="size" placeholder="XL">
+                    <label class="radiolabel" onclick="xl()" for="xl">XL</label>
+
+
+                </div>
+
+
+                <div id="size_guide">
+                    <img onclick="showback()" id="image"
+                        src="https://cdn.shopify.com/s/files/1/0702/1711/files/kids-performance-shirt-sizing.png?10136121462909454717"
+                        alt="">
+                    <button onclick="show()" id="btnid">Size Guide</button>
+                </div>
+            </div>
+            <div id="colour">
+                <p>COLOR</p>
+                <br>
+                <input class="colradioinput" type="radio" id="white" value="white" name="color">
+                <label class="colradiolabel" onclick="white()" for="white"></label>
+                <input class="colradioinput" type="radio" id="black" value="black" name="color">
+                <label class="colradiolabel" onclick="black()" for="black"></label>
+                <input class="colradioinput" type="radio" id="yellow" value="yellow" name="color">
+                <label class="colradiolabel" onclick="yellow()" for="yellow"></label>
+                <input class="colradioinput" type="radio" id="red" value="red" name="color">
+                <label class="colradiolabel" onclick="red()" for="red"></label>
+
+            </div>
+            <div id="card3_b"></div>
+        </div>
+
+    </div>
+
+    <div id="shoppingmain">
+        <b>CART</b> <strong onclick="popback()">X</strong>
+        <hr>
+        <div id="shoppingcart">
+
+        </div>
+        <div id="checkout">
+            <hr>
+            <p id="subtotalwa"></p>
+            <p id="para">Shipping, taxes, and discounts codes calculated at checkout.</p>
+            <button onclick="cartadding()">CHECK OUT</button>
+        </div>
+    </div>
+
+
+
+
+
+    <h1 id="heading">YOU MAY ALSO LIKE</h1>
+    <div id="like">
+
+    </div>
+    <hr>
+    <h1 id="heading">RECENTLY VIEWED</h1>
+    <div id="recent">
+
+    </div>
+    <button id="back"> &#8592; &nbsp; <a href="/direful-order-8525/clothing.html"> BACK TO PRODUCT PAGE</a></button>
+    <button id="add" onclick="add()">adding to cart</button>
+    <hr>
+</body>
+<script>
+
+    function xs() {
+        localStorage.setItem('size', JSON.stringify("XS"));
+    }
+    function s() {
+        localStorage.setItem('size', JSON.stringify("S"));
+    }
+    function m() {
+        localStorage.setItem('size', JSON.stringify("M"));
+    }
+    function l() {
+        localStorage.setItem('size', JSON.stringify("L"));
+    }
+    function xl() {
+        localStorage.setItem('size', JSON.stringify("XL"));
+    }
+    function white() {
+        localStorage.setItem('color', JSON.stringify("White"));
+    }
+    function black() {
+        localStorage.setItem('color', JSON.stringify("Black"));
+    }
+    function yellow() {
+        localStorage.setItem('color', JSON.stringify("Yellow"));
+    }
+    function red() {
+        localStorage.setItem('color', JSON.stringify("Red"));
+    }
+
+
+
+    let like_products = [
+        {
+            "id": "17",
+            "Category": "cloth",
+            "gender": "Men",
+            "title": "MONCLER LAPPE VEST",
+            "description": ["Manufacturer: JS Collections", "Closure: Hidden Back Zipper", "Material: 100% Polyester", "Approximately 45In From Shoulder To Hem"],
+            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1010391566_RLLZ_1_360x.jpg?v=1658861803",
+            "price": 899.99,
+            "strike_off": 1089.00
+        },
+        {
+            "id": "18",
+            "Category": "cloth",
+            "gender": "Men",
+            "title": "IMPERIAL MEN'S SHIRT IN BLACK",
+            "description": ["Manufacturer: JS Collections", "Closure: Hidden Back Zipper", "Material: 100% Polyester", "Approximately 45In From Shoulder To Hem"],
+            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/98274186_360x.jpg?v=1657846344",
+            "price": 150.99,
+            "strike_off": 389.00
+        },
+        {
+            "id": "47",
+            "Category": "cloth",
+            "gender": "Kid",
+            "title": "IMOGA MESH DRESS",
+            "description": ["Manufacturer: JS Collections", "Closure: Hidden Back Zipper", "Material: 100% Polyester", "Approximately 45In From Shoulder To Hem"],
+            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1511116425_RLLZ_1_360x.jpg?v=1660481024",
+            "price": 59.99,
+            "strike_off": 99.00
+        },
+        {
+            "id": "21",
+            "Category": "shoes",
+            "gender": "Others",
+            "title": "BLACK SNEAKER",
+            "description": ["Men's Sneakers", "Black Leather Heel", "White Rubber Midsole", "Comes With Dust Bags"],
+            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/2232557_1800x1800.jpg?v=1649100955",
+            "price": 352.99,
+            "strike_off": 795.00
+        },
+        {
+            "id": "24",
+            "Category": "shoes",
+            "gender": "Others",
+            "title": "GUCCI JORDAAN SATIN & LEATHER LOAFER",
+            "description": ["Men's Sneakers", "Black Leather Heel", "White Rubber Midsole", "Comes With Dust Bags"],
+            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1312396493_RLLZ_1_360x.jpg?v=1660681548",
+            "price": 550.99,
+            "strike_off": 799.00
+        },
+    ];
+    let recent_Products = [
+        {
+            "id": "1",
+            "Category": "cloth",
+            "gender": "Women",
+            "title": "WOMENS EMBELLISHED TRUMPET EVENING DRESS",
+            "description": ["Manufacturer: Aidan Mattox", "Style Type: Sheath", "Sleeve Length: Spaghetti Strap"],
+            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/eK7sZ5IVyl7NzVWHQJH3sYvsC4YX3Eq7-25_e16f1bc4-bb08-446d-8d26-a07b78c1523a_360x.jpg?v=1660095289",
+            "price": 110.99,
+            "strike_off": 150.00
+        },
+        {
+            "id": "2",
+            "Category": "cloth",
+            "gender": "Women",
+            "title": "WOMENS LACE FLORAL EVENING DRESS",
+            "description": ["Manufacturer: BCBGMAXAZRIA", "Material: 100% Polyester", "Fabric Type: Polyester"],
+            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/eJGeOZ65cTRusiZtduE3OuzXbLRp7aVx-25_360x.jpg?v=1661163613",
+            "price": 155.99,
+            "strike_off": 468.00
+        },
+        {
+            "id": "42",
+            "Category": "cloth",
+            "gender": "Kid",
+            "title": "NELLYSTELLA PEACH SILK-BLEND DRESS",
+            "description": ["Manufacturer: JS Collections", "Closure: Hidden Back Zipper", "Material: 100% Polyester", "Approximately 45In From Shoulder To Hem"],
+            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1543133694_RLLZ_1_260ea824-d386-4972-95b3-ec56f52ba730_360x.jpg?v=1659584945",
+            "price": 74.99,
+            "strike_off": 85.00
+        },
+        {
+            "id": "18",
+            "Category": "cloth",
+            "gender": "Men",
+            "title": "IMPERIAL MEN'S SHIRT IN BLACK",
+            "description": ["Manufacturer: JS Collections", "Closure: Hidden Back Zipper", "Material: 100% Polyester", "Approximately 45In From Shoulder To Hem"],
+            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/98274186_360x.jpg?v=1657846344",
+            "price": 150.99,
+            "strike_off": 389.00
+        },
+        {
+            "id": "29",
+            "Category": "shoes",
+            "gender": "Others",
+            "title": "CHRISTIAN LOUBOUTIN LOU SUEDE SNEAKER",
+            "description": ["Men's Sneakers", "Black Leather Heel", "White Rubber Midsole", "Comes With Dust Bags"],
+            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1312261737_RLLZ_1_360x.jpg?v=1659629898",
+            "price": 799.99,
+            "strike_off": 999.00
+        }]
+</script>
+<script>
+    let card1 = document.getElementById("card1");
+    let card2 = document.getElementById("card2");
+    let card3_a = document.getElementById("card3_a");
+    let card3_b = document.getElementById("card3_b");
+    let like = document.getElementById("like");
+    let recent = document.getElementById("recent");
+
+
+    function display1() {
+
+
+        let item = JSON.parse(localStorage.getItem('add'));
+        card1.innerHTML = null;
+        item.forEach(function (el) {
+            let div = document.createElement("div");
+
+            let image = document.createElement("img");
+            image.src = el.image;
+
+            div.append(image);
+            card1.append(div);
+        })
+    }
+
+
+
+    function display2() {
+        let item = JSON.parse(localStorage.getItem('add'));
+        card2.innerHTML = null;
+        item.forEach(function (el) {
+            let div = document.createElement("div");
+
+            let image = document.createElement("img");
+            image.src = el.image;
+
+            div.append(image);
+            card2.append(div);
+        })
+    }
+
+    function display3() {
+        let item = JSON.parse(localStorage.getItem('add'));
+        card3_a.innerHTML = null;
+        item.forEach(function (el) {
+            let div = document.createElement("div");
+
+            let title = document.createElement("h1");
+            title.innerText = el.title;
+
+            // let price = document.createElement("h2");
+            // price.innerText ="$"+ el.price;
+
+            let statement = document.createElement("h4");
+            statement.innerText = "FREE SHIPPING ON ORDERS OVER $99";
+
+            let p = document.createElement("a");
+
+            let percentage = document.createElement("a");
+            percentage.innerHTML = " " + "Save" + " " + Math.ceil(((el.strike_off - el.price) / el.strike_off) * 100) + "%";
+            percentage.style.color = "red";
+
+            let strikeprice = document.createElement("a");
+            strikeprice.innerHTML = "$" + el.strike_off + " ";
+            strikeprice.style.textDecoration = 'line-through';
+
+            let price = document.createElement("a");
+            price.innerHTML = " " + " " + "$" + el.price;
+
+
+            p.appendChild(strikeprice);
+            p.appendChild(price);
+            // $(p).appendChild($(" "));
+            p.appendChild(percentage);
+
+
+            div.append(title, p, statement);
+            card3_a.append(div);
+
+
+        })
+    }
+
+
+
+    function display4() {
+
+        let item = JSON.parse(localStorage.getItem('add'));
+
+        card3_b.innerHTML = null;
+        item.forEach(function (el) {
+            let div = document.createElement("div");
+
+
+            let cartbtn = document.createElement("button");
+            cartbtn.innerText = "ADD TO CART";
+            cartbtn.addEventListener("click", function () {
+                addtocart(el);
+                // showcart();
+                popcart();
+                // displayRadioValue();
+                // displayRadioValueclr();
+            });
+
+
+            let state = document.createElement("p");
+            state.innerText = "Usually ships in 1 to 2 business days";
+
+            let desc1 = document.createElement("p");
+            desc1.innerText = el.description[0];
+
+            let desc2 = document.createElement("p");
+            desc2.innerText = el.description[1];
+
+            let desc3 = document.createElement("p");
+            desc3.innerText = el.description[2];
+
+            div.append(cartbtn, state, desc1, desc2, desc3);
+            card3_b.append(div);
+
+
+        })
+    }
+
+    display1();
+    display2();
+    display3();
+    display4();
+
+    // function displayRadioValue() {
+    //     var ele = document.getElementsByName('size');
+
+    //     for (i = 0; i < ele.length; i++) {
+    //         if (ele[i].checked) {
+    //             localStorage.setItem('size', JSON.stringify(ele[i].value));
+    //         }
+
+    //     }
+
+    // }
+
+    // function displayRadioValueclr() {
+    //     var ele = document.getElementsByName('color');
+
+    //     for (i = 0; i < ele.length; i++) {
+    //         if (ele[i].checked) {
+    //             localStorage.setItem('color', JSON.stringify(ele[i].value));
+    //         }
+
+    //     }
+
+    // }
+
+    function addtocart(el) {
+        let size = JSON.parse(localStorage.getItem('size')) || [];
+        let color = JSON.parse(localStorage.getItem('color')) || [];
+        let cartLS = JSON.parse(localStorage.getItem('cart')) || [];
+        let iscartadded = false;
+        for (let i = 0; i < cartLS.length; i++) {
+            if (cartLS[i].id === el.id) {
+                alert("product is already in cart");
+                iscartadded = true;
+            }
+        }
+        if (iscartadded === false) {
+            el.color = color;
+            el.size = size;
+            cartLS.push(el);
+            localStorage.setItem('cart', JSON.stringify(cartLS));
+            // showcart(cart);
+        }
+
+    }
+
+    function displaylike(like_products) {
+        like.innerHTML = null;
+        like_products.forEach(function (el) {
+            let div = document.createElement("div");
+            div.addEventListener("click", function () {
+                let x = [];
+                x.push(el);
+                localStorage.setItem('add', JSON.stringify(x));
+                window.location.reload();
+                display1();
+                display2();
+                display3();
+                display4();
+            })
+
+            let image = document.createElement("img");
+            image.src = el.image;
+
+            let btn = document.createElement("button");
+            btn.innerText = "QUICK VIEW";
+            btn.addEventListener("click", function () {
+                let x = [];
+                x.push(el);
+                localStorage.setItem('add', JSON.stringify(x));
+                window.location.reload();
+                display1();
+                display2();
+                display3();
+                display4();
+            })
+
+            let title = document.createElement("h4");
+            title.innerText = el.title;
+
+            let p = document.createElement("a");
+
+            let percentage = document.createElement("a");
+            percentage.innerHTML = " " + "Save" + " " + Math.ceil(((el.strike_off - el.price) / el.strike_off) * 100) + "%";
+            percentage.style.color = "red";
+
+            let strikeprice = document.createElement("a");
+            strikeprice.innerHTML = "$" + el.strike_off + " ";
+            strikeprice.style.textDecoration = 'line-through';
+
+            let price = document.createElement("a");
+            price.innerHTML = " " + " " + "$" + el.price;
+
+
+            p.appendChild(strikeprice);
+            p.appendChild(price);
+            p.appendChild(percentage);
+            div.append(image, btn, title, p);
+            like.append(div);
+        })
+    }
+
+    displaylike(like_products);
+
+
+
+    function displayrecent(recent_Products) {
+        recent.innerHTML = null;
+        recent_Products.forEach(function (el) {
+            let div = document.createElement("div");
+            div.addEventListener("click", function () {
+                let x = [];
+                x.push(el);
+                localStorage.setItem('add', JSON.stringify(x));
+                window.location.reload();
+                display1();
+                display2();
+                display3();
+                display4();
+            })
+
+            let image = document.createElement("img");
+            image.src = el.image;
+
+
+            let title = document.createElement("h4");
+            title.innerText = el.title;
+
+            let p = document.createElement("a");
+
+            let percentage = document.createElement("a");
+            percentage.innerHTML = " " + "Save" + " " + Math.ceil(((el.strike_off - el.price) / el.strike_off) * 100) + "%";
+            percentage.style.color = "red";
+
+            let strikeprice = document.createElement("a");
+            strikeprice.innerHTML = "$" + el.strike_off + " ";
+            strikeprice.style.textDecoration = 'line-through';
+
+            let price = document.createElement("a");
+            price.innerHTML = " " + " " + "$" + el.price;
+
+
+            p.appendChild(strikeprice);
+            p.appendChild(price);
+            // $(p).appendChild($(" "));
+            p.appendChild(percentage);
+            div.append(image, title, p);
+            recent.append(div);
+        })
+    }
+
+    displayrecent(recent_Products);
+
+
+    function show() {
+        document.getElementById('image')
+            .style.display = "block";
+
+        document.getElementById('btnid')
+            .style.display = "none";
+    }
+    function showback() {
+        document.getElementById('image')
+            .style.display = "none";
+
+        document.getElementById('btnid')
+            .style.display = "block";
+    }
+
+    function popcart() {
+        document.getElementById("shoppingmain").style.display = "block";
+        showcart();
+    }
+
+    function popback() {
+        document.getElementById("shoppingmain").style.display = "none";
+
+        // showcart();
+    }
+
+
+    let shoppingcart = document.getElementById("shoppingcart");
+    let subtotalwa = document.getElementById("subtotalwa");
+    let totalam = 0;
+
+
+    function showcart() {
+        let cartLS = JSON.parse(localStorage.getItem('cart'));
+        // let size = JSON.parse(localStorage.getItem('size')) || [];
+        // let color = JSON.parse(localStorage.getItem('color')) || [];
+        shoppingcart.innerHTML = null;
+
+
+        cartLS.forEach(function (el) {
+            if (totalam === 0) {
+                totalam = Number(el.price);
+            } else {
+                totalam = totalam + Number(el.price);
+            }
+
+            let c = 1;
+
+            let div = document.createElement("div");
+
+
+            let image = document.createElement("img");
+            image.src = el.image;
+
+            let div1 = document.createElement("span");
+            div1.style.marginTop = "-30px";
+
+
+
+            let title = document.createElement("h4");
+            title.innerText = el.title;
+
+            let price = document.createElement("h5");
+            price.innerText = "$" + el.price;
+            let hr = document.createElement("hr");
+
+            let totalamount = document.createElement("span");
+            totalamount.innerText = totalam;
+
+
+            let pro_size = document.createElement("span");
+            pro_size.innerText = el.size + " ";
+
+            let pro_clr = document.createElement("span");
+            pro_clr.innerText = "|" + " " + el.color;
+
+            let div2 = document.createElement("span");
+            div2.style.padding = "15px";
+
+            let minus = document.createElement("a");
+            minus.innerText = "-";
+            minus.style.border = "1px solid grey";
+            minus.style.padding = "5px 10px";
+            minus.addEventListener("click", function () {
+                if (c == 1) {
+
+                    totalam = totalam - Number(totalam);
+                    totalamount.innerText = totalam;
+                    subtotalwa.innerHTML = null;
+                    subtotalwa.append("SUBTOTAL : ", "$", totalamount);
+                    console.log(totalam);
+                    count.innerText = c, totalam;
+                    deletecart(el);
+                } else {
+                    c--;
+                    count.innerText = c, totalam;
+                    totalam = totalam - Number(el.price);
+                    totalamount.innerText = totalam;
+                    subtotalwa.innerHTML = null;
+                    subtotalwa.append("SUBTOTAL : ", "$", totalamount);
+                    console.log(totalam);
+                }
+
+            })
+
+            let count = document.createElement("a");
+            count.style.border = "1px solid grey";
+            count.style.padding = "5px 10px";
+            count.innerText = c;
+
+
+            let plus = document.createElement("a");
+            plus.innerText = "+";
+            plus.style.border = "1px solid grey";
+            plus.style.padding = "5px 10px";
+            plus.addEventListener("click", function () {
+                if (c < 5) {
+                    c++;
+
+                    count.innerText = c, totalam;
+                    totalam = totalam + Number(el.price);
+                    totalamount.innerText = totalam;
+                    subtotalwa.innerHTML = null;
+                    subtotalwa.append("SUBTOTAL : ", "$", totalamount);
+                    console.log(totalam);
+                } else {
+                    count.innerText = c, totalam;
+                    totalam = totalam
+                    totalamount.innerText = totalam;
+                    subtotalwa.innerHTML = null;
+                    subtotalwa.append("SUBTOTAL : ", "$", totalamount);
+                    console.log(totalam);
+                }
+
+            })
+
+
+            div2.append(minus, count, plus)
+            div1.append(title, price, pro_size, pro_clr, div2);
+            div.append(image, div1);
+            shoppingcart.append(div);
+            subtotalwa.innerHTML = null;
+            subtotalwa.append("SUBTOTAL : ", "$", totalamount);
+
+
+
+        })
+
+    }
+
+    function cartadding() {
+        localStorage.setItem('total', JSON.stringify(totalam));
+    }
+
+
+
+    function deletecart(el) {
+        let cart = JSON.parse(localStorage.getItem('cart'));
+        console.log(el.id);
+        let x = cart.filter(function (ele, i) {
+            console.log(ele.id);
+            return ele.id !== el.id;
+        })
+        localStorage.setItem('cart', JSON.stringify(x));
+        showcart();
+    }
+
+
+
+
+
+
+
+
+
+    function add() {
+        let adding = [
+            {
+                "id": "42",
+                "Category": "cloth",
+                "gender": "Kid",
+                "title": "NELLYSTELLA PEACH SILK-BLEND DRESS",
+                "description": ["Manufacturer: JS Collections", "Closure: Hidden Back Zipper", "Material: 100% Polyester", "Approximately 45In From Shoulder To Hem"],
+                "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1543133694_RLLZ_1_260ea824-d386-4972-95b3-ec56f52ba730_360x.jpg?v=1659584945",
+                "price": 74.99,
+                "strike_off": 85.00
+            },
+        ]
+
+        localStorage.setItem('add', JSON.stringify(adding));
+    }
+</script>
+
+
+
+</html>

@@ -1,23 +1,85 @@
 #slide{
-margin: auto;
-margin-top: 10px;
-text-align: center;
+    margin-top: 10px;
 background-color: black;
-color: white;
-padding-top: 0.5px;
-padding-bottom: 0.5px;
+}
+#slide_text{
+    margin: auto;
+    /* margin-top: 180px; */
+    color: white;
+padding-top: 10px;
+padding-bottom: 10px;
+transform: translateX(100%);
+animation: slide_text 15s linear infinite;
+}
+@keyframes slide_text{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
 }
 #head_line{
     text-align: center;
+    font-family: Tiemann,serif;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+#container_div{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#container_div>div:nth-child(1){
+margin-right: 60px;
 }
 #clothing{
     margin: auto;
-    width: 70%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap:20px;
+    gap:30px;
 }
 #clothing img{
-    width: 100%;
-    height: 300px;
+    /* width: 100%;
+    height: 250px; */
+    max-width: 100%;
+    max-height: 300px;
+}
+#clothing>div{
+    text-align: center;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 5px;
+    font-family: Futura,sans-serif;
+    letter-spacing: .025em;
+    font-size: .8em;
+    cursor: pointer;
+}
+#clothing>div:hover{
+    border: 1px solid black;
+
+}
+#sort_price{
+    margin-top: 40px ;
+    margin-bottom: 40px;
+    font-size: 16px;
+    cursor: pointer;
+   
+}
+#sort{
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+del{
+ color: #333!important;
+    font-size: 15px;
+    font-weight: 400;
+}
+#sort_type{
+    font-size: 16px;
+    cursor: pointer;
 }

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoes page</title>
     <title>Clothing page</title>
     <link rel="stylesheet" href="clothing.css">
     <link rel ="stylesheet" href="./navbar.css">
@@ -13,36 +11,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-   <div id="nav"></div>
+    
+        <div id="nav"></div>
     <div id="slide"></div>
-    <h1 id="head_line">All Clothing</h1>
+    <h1 id="head_line">All Shoes</h1>
     <div id="container_div">
         <div>
-            <select id="sort" multiple="multiple" onchange="fiter_prod()">
-                <option value="All">Sort Based on Gender</option>
-                <option value="Men">Men</option>
-                <option value="Women">Women</option>
-                <option value="Kid">Kid</option>
-            </select>
             <select id="sort_price" multiple="multiple" onchange="fiter_prod_price()">
                 <option value="All">Sort Based on Price</option>
                 <option value=100>Under $100</option>
                 <option value=500>Under $500</option>
                 <option value=1000>Under $1000</option>
             </select>
-            <select id="sort_type" multiple="multiple" onchange="fiter_prod_type()">
-                <option value="All">Sort Based on Type</option>
-                <option value='T-shirt'>T-shirt</option>
-                <option value='Shirt'>Shirt</option>
-                <option value='Pant'>Pant</option>
-            </select>
         </div>
         <div id="clothing"></div>
-    </div>
+    </div>    
     <div id="foot"></div>
 </body>
 </html>
-<script src="clothing.js"></script>
+<script src="shoes.js"></script>
 <script type="module">
     import {navbar,footer} from './navbar.js';
     let nav = document.getElementById("nav").innerHTML= navbar()

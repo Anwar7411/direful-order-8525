@@ -11,6 +11,7 @@ h3.innerText=headline[count];
 slide.append(h3);
 count++;
 }, 9000);
+
 let Products=[
     {
       "id": "1",
@@ -707,7 +708,7 @@ let Products=[
       "gender":"Others",
       "title": "CHRISTIAN LOUBOUTIN LOU SUEDE SNEAKER",
       "description": ["Men's Sneakers","Black Leather Heel","White Rubber Midsole","Comes With Dust Bags"],
-      "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1312261737_RLLZ_1_360x.jpg?v=1659629898",
+      "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/73100194_360x.jpg?v=1659877207",
       "price": 799.99,
       "strike_off": 999.00
     },
@@ -737,7 +738,7 @@ let Products=[
       "gender":"Others",
       "title": "CLUB C COAST MENS TENNIS LIFESTYLE FASHION SNEAKERS",
       "description": ["Men's Sneakers","Black Leather Heel","White Rubber Midsole","Comes With Dust Bags"],
-      "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/G93tyTprQDThlEJRPckrwKCsXsjlbk82-25_be76ebb2-a111-4cd4-96cb-b0ba2d6d255b_360x.jpg?v=1661158720",
+      "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1312259723_RLLZ_1_360x.jpg?v=1660838009",
       "price": 60.99,
       "strike_off": 89.00
     },
@@ -747,7 +748,7 @@ let Products=[
       "gender":"Others",
       "title": "HOVR INFINITE 3 MENS PERFORMANCE RUNNING SMART SHOES",
       "description": ["Men's Sneakers","Black Leather Heel","White Rubber Midsole","Comes With Dust Bags"],
-      "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/CxYl8EhVhZpnzfRgrDYKxDMF7Hb4nl5R-25_360x.jpg?v=1660732738",
+      "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/FUQaT5FfaKuWaX4yH1K2RR2T8v0MQRLz-25_6fafa1a1-b5d8-4ed6-bbd4-88c2d8a7a122_1800x1800.jpg?v=1657895154",
       "price": 80.99,
       "strike_off": 189.00
     },
@@ -777,7 +778,7 @@ let Products=[
       "gender":"Others",
       "title": "ALBORGPLUS MENS LACE UP WINTER ANKLE BOOTS",
       "description": ["Men's Sneakers","Black Leather Heel","White Rubber Midsole","Comes With Dust Bags"],
-      "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/O3kZANiQg6AyAXRzhAocQpOTtv3VaQX2-25_360x.jpg?v=1661045895",
+      "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/ztwKHUgr05RxxXFp2mwoIZRnOFGhHVTf-25_360x.jpg?v=1661403862",
       "price": 68.99,
       "strike_off": 156.00
     },
@@ -807,7 +808,7 @@ let Products=[
       "gender":"Others",
       "title": "CHRISTIAN LOUBOUTIN LOUIS SUEDE & LEATHER SNEAKER",
       "description": ["Men's Sneakers","Black Leather Heel","White Rubber Midsole","Comes With Dust Bags"],
-      "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1312391921_RLLZ_1_360x.jpg?v=1659461685",
+      "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1312147450_RLLZ_1_360x.jpg?v=1661448725",
       "price": 851.99,
       "strike_off": 999.00
     },
@@ -862,10 +863,10 @@ let Products=[
       "strike_off": 85.00
     },
   ]
-let head_line=document.getElementById('head_line');
- function main(){
+
+function main(){
     let data= Products.filter((ele)=>{      
-       return ele.Category==='cloth'
+       return ele.Category==='shoes'
          })
          append(data);
         }
@@ -893,61 +894,13 @@ function append(data){
     });
 
 }
-function fiter_prod(){
-let sort_val=document.getElementById("sort").value;
-if(sort_val==='All'){
-  head_line.innerText=(`${sort_val} Clothing`)
-  return main()
-}
-let filter_data=Products.filter((ele)=>{
-  return ele.gender===sort_val
-})
-head_line.innerText=(`${sort_val} Clothing`)
-append(filter_data);
-}
-
 function fiter_prod_price(){
-  let sort_val=document.getElementById("sort_price").value;
-  if(sort_val==='All'){
-    head_line.innerText=(`All Clothing`)
-    return main()
+    let sort_val=document.getElementById("sort_price").value;
+    if(sort_val==='All'){
+      return main()
+    }
+    let filter_data=Products.filter((ele)=>{
+      return ele.price<=sort_val && ele.Category==='shoes'
+    })
+    append(filter_data);
   }
-  let filter_data=Products.filter((ele)=>{
-    return ele.price<=sort_val && ele.Category==='cloth'
-  })
-  head_line.innerText=(`All Clothing`)
-  append(filter_data);
-}
-
-function clicked_prod(el){
-  let arr=[];
-  arr.push(el);
-  localStorage.setItem("add",JSON.stringify(arr));
-  window.location.href="./cart.html"
-}
-
-function fiter_prod_type(){
-  let sort_val=document.getElementById("sort_type").value;
-  if(sort_val==='All'){
-    head_line.innerText=(`Mens ${sort_val}`)
-    return main()
-  }
-  let filter_data=Products.filter((ele)=>{
-    return ele.type==sort_val
-  })
-  head_line.innerText=(`Mens ${sort_val}`)
-  append(filter_data);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
