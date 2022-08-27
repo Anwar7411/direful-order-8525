@@ -4,7 +4,7 @@ background-color: black;
 }
 #slide_text{
     margin: auto;
-    margin-top: 180px;
+    /* margin-top: 180px; */
     color: white;
 padding-top: 10px;
 padding-bottom: 10px;
@@ -27,13 +27,13 @@ animation: slide_text 15s linear infinite;
     line-height: 1;
     text-transform: uppercase;
 }
-#container{
+#container_div{
     width: 70%;
     margin: auto;
     display: flex;
     justify-content: space-between;
 }
-#container>div:nth-child(1){
+#container_div>div:nth-child(1){
 margin-right: 60px;
 }
 #clothing{
@@ -50,6 +50,7 @@ margin-right: 60px;
 }
 #clothing>div{
     text-align: center;
+
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 5px;
     font-family: Futura,sans-serif;

@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document/Autoplay_Navigation</title>
     <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./home.css" />
+    <link rel ="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/1ea9883031.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div id="container"></div>
 
+    <div id="slide"></div>
     <div id="main">
     
         <img id="slider" src="img1.webp" alt="">
@@ -24,27 +32,27 @@
             <div class="one">DRESSES FOR EVERY OCCASION</div>
             <div class="two">UP TO 94% OFF</div>
             <div class="three">Featuring BCBGMaxazria, Halston, Kay Unger & More</div>
-            <button class="btn">SHOP DRESSES</button>
+            <button class="btn_offer">SHOP DRESSES</button>
         </div>
         <div class="offer">
             <img src="div2.webp">
             <div style="left: 33%;" class="one">DESIGNER BOUTIQUE</div>
             <div class="two">UP TO 84% OFF</div>
             <div class="three">Bes-Selling Style from:Gucci, Valentino, Balenciaga, Stuart Weitzman & More</div>
-            <button style="left:23%;" class="btn">SHOP DESIGNER BOUTIQUE</button>
+            <button style="left:23%;" class="btn_offer">SHOP DESIGNER BOUTIQUE</button>
         </div>
         <div class="offer">
             <img src="div3.webp">
             <div style="left: 8%;" class="one">TRENDING TOPS FOR THE NEW SEASON</div>
             <div class="two">UP TO 85% OFF</div>
             <div style="left:17%" class="three">Featuring Gracia, Theory, Trina Turk & More</div>
-            <button class="btn">SHOP WOMEN'S TOPS</button>
+            <button class="btn_offer">SHOP WOMEN'S TOPS</button>
         </div>
     </div>
 
     <h1 style="text-align:center;">SHOP BY CATEGORY</h1>
     <div id="cat">
-        <div>
+        <div id="dresses">
             <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1411212007_RLLZ_1_180x.jpg?v=1661173092">
             <p>DRESSES</p>
         </div>
@@ -84,6 +92,15 @@
         <div>
             <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/products/pd6460y1_180x.jpg?v=1661347714">
             <p>JEWELRY</p>
+        </div>
+    </div>
+
+    <div id="main1">
+    
+        <img id="slider1" src="img1.webp" alt="">
+        <div id="btn1">
+            <a id="left1" href="#">❮</a>
+            <a id="right1" href="#">❯</a><br>
         </div>
     </div>
     <h1>New Arrivals</h1>
@@ -188,3 +205,9 @@
 </body>
 </html>
 <script src="./home.js"></script>
+<script type="module">
+    import {navbar,footer} from './navbar.js';
+    let container = document.getElementById("container").innerHTML= navbar()
+
+    let foot = document.getElementById("foot").innerHTML = footer()
+</script>

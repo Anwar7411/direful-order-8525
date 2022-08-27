@@ -2,6 +2,18 @@ body{
     margin: 0px;
     padding: 0px;
 }
+#slide{
+    margin-top: 15px;
+    background-color: black;
+}
+#slide_text{
+    margin: auto;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transform: translateX(100%);
+    animation: slide_text 15s linear infinite;
+}
 #main{
     width: 100%;
     height: 500px;
@@ -39,6 +51,47 @@ body{
     
 }
 #left:hover, #right:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+#main1{
+    width: 100%;
+    height: 500px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    
+}
+#slider1{
+    width: 100%;
+    height: 500px;
+}
+#left1, #right1{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+}
+#left1{
+    top: 300px;
+    left:10px;
+    position: absolute;
+    display: none;
+}
+#right1 {
+    right: 10px;
+    position: absolute;
+    top: 300px;
+    display: none;
+    
+}
+#left1:hover, #right1:hover {
     background-color: rgba(0,0,0,0.8);
 }
 #offer_tag{
@@ -163,7 +216,7 @@ button{
     left: 7%;
     font-size: 1.1rem;
     font-weight: 500;}
-.btn{
+.btn_offer{
     position: absolute;
     bottom: 25%;
     left: 30%;

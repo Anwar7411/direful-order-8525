@@ -144,12 +144,20 @@
 
     #back {
         margin: 50px auto 25px 580px;
+        /* margin: 50px auto; */
+
         background-color: black;
         color: white;
         padding: 15px 25px;
         font-weight: 900;
         letter-spacing: 2px;
         font-size: 16px;
+
+    }
+
+    #back a {
+        text-decoration: none;
+        color: white;
     }
 
     #image {
@@ -276,11 +284,11 @@
         grid-template-rows: auto;
         grid-template-columns: 1fr 4fr;
         gap: 5px;
-    padding: 35px;
-   
+        padding: 35px;
+
         border-bottom: 1px solid rgb(232, 228, 228);
     }
-    
+
 
     #shoppingmain {
         width: 550px;
@@ -297,7 +305,7 @@
         transition-delay: 2s;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
-    
+
 
     #shoppingmain strong {
         margin-left: 400px;
@@ -325,8 +333,9 @@
         font-size: 16px;
         /* border: 1px solid red; */
     }
-    #checkout{
-       margin-top: 200px;
+
+    #checkout {
+        margin-top: 200px;
     }
 
     #checkout button {
@@ -336,15 +345,103 @@
         padding: 5px 200px;
         margin: 5px;
     }
-    #subtotalwa{
-        padding:0px 25px;
+
+    #subtotalwa {
+        padding: 0px 25px;
         font-weight: 900;
     }
-    #para{
+
+    #para {
         padding: 0px 25px;
     }
 
+    @media screen and (min-width:650px) and (max-width:1024px) {
+
+        #container {
+            width: 98%;
+            margin: auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 3fr 5fr;
+            gap: 20px;
+        }
+
+        #back {
+            margin: 50px 250px;
+            background-color: black;
+            color: white;
+            padding: 15px 25px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            font-size: 16px;
+
+        }
+
+        #like {
+            width: 98%;
+            margin: 80px auto;
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+
+        #recent {
+            width: 98%;
+            margin: 80px auto;
+            display: grid;
+            grid-template-rows: repeat(2, auto);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+
+
+    }
+
+    @media screen and (min-width:320px) and (max-width:650px) {
+
+        #container {
+            width: 98%;
+            margin: auto;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 0fr 3fr 5fr;
+            gap: 20px;
+        }
+
+        #back {
+            margin: 50px 150px;
+            background-color: black;
+            color: white;
+            padding: 15px 25px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            font-size: 16px;
+
+        }
+
+        #like {
+            width: 98%;
+            margin: 80px auto;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+        #recent {
+            width: 98%;
+            margin: 80px auto;
+            display: grid;
+            grid-template-rows: repeat(3, auto);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+
+    }
 </style>
+
 <body>
 
     <div id="container">
@@ -363,15 +460,15 @@
                         and conversion guide for proper sizing.)</p>
                     <br>
                     <input class="radioinput" type="radio" id="xs" value="Extra Small" name="size" placeholder="XS">
-                    <label class="radiolabel" for="xs">XS</label>
+                    <label class="radiolabel" onclick="xs()" for="xs">XS</label>
                     <input class="radioinput" type="radio" id="s" value="Small" name="size" placeholder="S">
-                    <label class="radiolabel" for="s">S</label>
+                    <label class="radiolabel" onclick="s()" for="s">S</label>
                     <input class="radioinput" type="radio" id="m" value="Medium" name="size" placeholder="M">
-                    <label class="radiolabel" for="m">M</label>
+                    <label class="radiolabel" onclick="m()" for="m">M</label>
                     <input class="radioinput" type="radio" id="l" value="Lage" name="size" placeholder="L">
-                    <label class="radiolabel" for="l">L</label>
+                    <label class="radiolabel" onclick="l()" for="l">L</label>
                     <input class="radioinput" type="radio" id="xl" value="Extra Large" name="size" placeholder="XL">
-                    <label class="radiolabel" for="xl">XL</label>
+                    <label class="radiolabel" onclick="xl()" for="xl">XL</label>
 
 
                 </div>
@@ -388,13 +485,13 @@
                 <p>COLOR</p>
                 <br>
                 <input class="colradioinput" type="radio" id="white" value="white" name="color">
-                <label class="colradiolabel" for="white"></label>
+                <label class="colradiolabel" onclick="white()" for="white"></label>
                 <input class="colradioinput" type="radio" id="black" value="black" name="color">
-                <label class="colradiolabel" for="black"></label>
+                <label class="colradiolabel" onclick="black()" for="black"></label>
                 <input class="colradioinput" type="radio" id="yellow" value="yellow" name="color">
-                <label class="colradiolabel" for="yellow"></label>
+                <label class="colradiolabel" onclick="yellow()" for="yellow"></label>
                 <input class="colradioinput" type="radio" id="red" value="red" name="color">
-                <label class="colradiolabel" for="red"></label>
+                <label class="colradiolabel" onclick="red()" for="red"></label>
 
             </div>
             <div id="card3_b"></div>
@@ -412,7 +509,7 @@
             <hr>
             <p id="subtotalwa"></p>
             <p id="para">Shipping, taxes, and discounts codes calculated at checkout.</p>
-            <button>CHECK OUT</button>
+            <button onclick="cartadding()">CHECK OUT</button>
         </div>
     </div>
 
@@ -429,11 +526,42 @@
     <div id="recent">
 
     </div>
-    <button id="back"> &#8592; &nbsp; BACK TO PRODUCT PAGE</button>
+    <button id="back"> &#8592; &nbsp; <a href="/direful-order-8525/clothing.html"> BACK TO PRODUCT PAGE</a></button>
     <button id="add" onclick="add()">adding to cart</button>
     <hr>
 </body>
 <script>
+
+    function xs() {
+        localStorage.setItem('size', JSON.stringify("XS"));
+    }
+    function s() {
+        localStorage.setItem('size', JSON.stringify("S"));
+    }
+    function m() {
+        localStorage.setItem('size', JSON.stringify("M"));
+    }
+    function l() {
+        localStorage.setItem('size', JSON.stringify("L"));
+    }
+    function xl() {
+        localStorage.setItem('size', JSON.stringify("XL"));
+    }
+    function white() {
+        localStorage.setItem('color', JSON.stringify("White"));
+    }
+    function black() {
+        localStorage.setItem('color', JSON.stringify("Black"));
+    }
+    function yellow() {
+        localStorage.setItem('color', JSON.stringify("Yellow"));
+    }
+    function red() {
+        localStorage.setItem('color', JSON.stringify("Red"));
+    }
+
+
+
     let like_products = [
         {
             "id": "17",
@@ -546,6 +674,7 @@
     let like = document.getElementById("like");
     let recent = document.getElementById("recent");
 
+
     function display1() {
 
 
@@ -623,7 +752,9 @@
 
 
     function display4() {
+
         let item = JSON.parse(localStorage.getItem('add'));
+
         card3_b.innerHTML = null;
         item.forEach(function (el) {
             let div = document.createElement("div");
@@ -635,8 +766,8 @@
                 addtocart(el);
                 // showcart();
                 popcart();
-                displayRadioValue();
-                displayRadioValueclr();
+                // displayRadioValue();
+                // displayRadioValueclr();
             });
 
 
@@ -664,42 +795,47 @@
     display3();
     display4();
 
-    function displayRadioValue() {
-        var ele = document.getElementsByName('size');
+    // function displayRadioValue() {
+    //     var ele = document.getElementsByName('size');
 
-        for (i = 0; i < ele.length; i++) {
-            if (ele[i].checked) {
-                localStorage.setItem('size', JSON.stringify(ele[i].value));
-            }
+    //     for (i = 0; i < ele.length; i++) {
+    //         if (ele[i].checked) {
+    //             localStorage.setItem('size', JSON.stringify(ele[i].value));
+    //         }
 
-        }
+    //     }
 
-    }
+    // }
 
-    function displayRadioValueclr() {
-        var ele = document.getElementsByName('color');
+    // function displayRadioValueclr() {
+    //     var ele = document.getElementsByName('color');
 
-        for (i = 0; i < ele.length; i++) {
-            if (ele[i].checked) {
-                localStorage.setItem('color', JSON.stringify(ele[i].value));
-            }
+    //     for (i = 0; i < ele.length; i++) {
+    //         if (ele[i].checked) {
+    //             localStorage.setItem('color', JSON.stringify(ele[i].value));
+    //         }
 
-        }
+    //     }
 
-    }
+    // }
 
     function addtocart(el) {
+        let size = JSON.parse(localStorage.getItem('size')) || [];
+        let color = JSON.parse(localStorage.getItem('color')) || [];
         let cartLS = JSON.parse(localStorage.getItem('cart')) || [];
         let iscartadded = false;
-        // for (let i = 0; i < cartLS.length; i++) {
-        //     if (cartLS[i].id === el.id) {
-        //         alert("product is already in cart");
-        //         iscartadded = true;
-        //     }
-        // }
+        for (let i = 0; i < cartLS.length; i++) {
+            if (cartLS[i].id === el.id) {
+                alert("product is already in cart");
+                iscartadded = true;
+            }
+        }
         if (iscartadded === false) {
+            el.color = color;
+            el.size = size;
             cartLS.push(el);
             localStorage.setItem('cart', JSON.stringify(cartLS));
+            // showcart(cart);
         }
 
     }
@@ -708,13 +844,32 @@
         like.innerHTML = null;
         like_products.forEach(function (el) {
             let div = document.createElement("div");
+            div.addEventListener("click", function () {
+                let x = [];
+                x.push(el);
+                localStorage.setItem('add', JSON.stringify(x));
+                window.location.reload();
+                display1();
+                display2();
+                display3();
+                display4();
+            })
 
             let image = document.createElement("img");
             image.src = el.image;
 
             let btn = document.createElement("button");
             btn.innerText = "QUICK VIEW";
-
+            btn.addEventListener("click", function () {
+                let x = [];
+                x.push(el);
+                localStorage.setItem('add', JSON.stringify(x));
+                window.location.reload();
+                display1();
+                display2();
+                display3();
+                display4();
+            })
 
             let title = document.createElement("h4");
             title.innerText = el.title;
@@ -749,6 +904,16 @@
         recent.innerHTML = null;
         recent_Products.forEach(function (el) {
             let div = document.createElement("div");
+            div.addEventListener("click", function () {
+                let x = [];
+                x.push(el);
+                localStorage.setItem('add', JSON.stringify(x));
+                window.location.reload();
+                display1();
+                display2();
+                display3();
+                display4();
+            })
 
             let image = document.createElement("img");
             image.src = el.image;
@@ -812,15 +977,23 @@
 
     let shoppingcart = document.getElementById("shoppingcart");
     let subtotalwa = document.getElementById("subtotalwa");
+    let totalam = 0;
+
+
     function showcart() {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let size = JSON.parse(localStorage.getItem('size')) || [];
-        let color = JSON.parse(localStorage.getItem('color')) || [];
+        let cartLS = JSON.parse(localStorage.getItem('cart'));
+        // let size = JSON.parse(localStorage.getItem('size')) || [];
+        // let color = JSON.parse(localStorage.getItem('color')) || [];
         shoppingcart.innerHTML = null;
 
-        
-        cart.forEach(function (el, index) {
-            let totalam =Number(el.price) ;
+
+        cartLS.forEach(function (el) {
+            if (totalam === 0) {
+                totalam = Number(el.price);
+            } else {
+                totalam = totalam + Number(el.price);
+            }
+
             let c = 1;
 
             let div = document.createElement("div");
@@ -830,9 +1003,9 @@
             image.src = el.image;
 
             let div1 = document.createElement("span");
-            div1.style.marginTop="-30px";
+            div1.style.marginTop = "-30px";
 
-            
+
 
             let title = document.createElement("h4");
             title.innerText = el.title;
@@ -841,15 +1014,15 @@
             price.innerText = "$" + el.price;
             let hr = document.createElement("hr");
 
-            let totalamount=document.createElement("span");
-            totalamount.innerText=totalam;
+            let totalamount = document.createElement("span");
+            totalamount.innerText = totalam;
 
 
             let pro_size = document.createElement("span");
-            pro_size.innerText = size + " ";
+            pro_size.innerText = el.size + " ";
 
             let pro_clr = document.createElement("span");
-            pro_clr.innerText = "|" + " " + color;
+            pro_clr.innerText = "|" + " " + el.color;
 
             let div2 = document.createElement("span");
             div2.style.padding = "15px";
@@ -859,19 +1032,22 @@
             minus.style.border = "1px solid grey";
             minus.style.padding = "5px 10px";
             minus.addEventListener("click", function () {
-                if (c==1) {
-                    //    deletecart(index);
-                    //    console.log("bhag");
-                    totalam = totalam-Number(totalam);
-                    totalamount.innerText=totalam;
+                if (c == 1) {
+
+                    totalam = totalam - Number(totalam);
+                    totalamount.innerText = totalam;
+                    subtotalwa.innerHTML = null;
+                    subtotalwa.append("SUBTOTAL : ", "$", totalamount);
                     console.log(totalam);
-                    count.innerText = c,totalam;
-                    deletecart();
+                    count.innerText = c, totalam;
+                    deletecart(el);
                 } else {
                     c--;
-                    count.innerText = c,totalam;
-                    totalam = totalam -Number(el.price);
-                    totalamount.innerText=totalam;
+                    count.innerText = c, totalam;
+                    totalam = totalam - Number(el.price);
+                    totalamount.innerText = totalam;
+                    subtotalwa.innerHTML = null;
+                    subtotalwa.append("SUBTOTAL : ", "$", totalamount);
                     console.log(totalam);
                 }
 
@@ -891,30 +1067,23 @@
                 if (c < 5) {
                     c++;
 
-                    count.innerText = c,totalam;
-                    totalam = totalam +Number(el.price);
-                    totalamount.innerText=totalam;
+                    count.innerText = c, totalam;
+                    totalam = totalam + Number(el.price);
+                    totalamount.innerText = totalam;
+                    subtotalwa.innerHTML = null;
+                    subtotalwa.append("SUBTOTAL : ", "$", totalamount);
                     console.log(totalam);
                 } else {
-                    count.innerText = c,totalam;
+                    count.innerText = c, totalam;
                     totalam = totalam
-                    totalamount.innerText=totalam;
+                    totalamount.innerText = totalam;
+                    subtotalwa.innerHTML = null;
+                    subtotalwa.append("SUBTOTAL : ", "$", totalamount);
                     console.log(totalam);
                 }
 
             })
 
-           
-           
-
-            // let del = document.createElement("img");
-            // del.src = "https://cdn2.iconfinder.com/data/icons/thin-line-color-1/21/33-512.png";
-            // del.style.width = "25px";
-            // del.style.marginLeft = "101px";
-            // del.addEventListener("click", function (el) {
-            //     deletecart(el);
-
-            // })
 
             div2.append(minus, count, plus)
             div1.append(title, price, pro_size, pro_clr, div2);
@@ -923,18 +1092,27 @@
             subtotalwa.innerHTML = null;
             subtotalwa.append("SUBTOTAL : ", "$", totalamount);
 
+
+
         })
+
     }
 
+    function cartadding() {
+        localStorage.setItem('total', JSON.stringify(totalam));
+    }
+
+
+
     function deletecart(el) {
-        let cartLS = JSON.parse(localStorage.getItem('cart')) || [];
-        let x = cartLS.filter(function (el) {
-            return cartLS.id === el.id;
+        let cart = JSON.parse(localStorage.getItem('cart'));
+        console.log(el.id);
+        let x = cart.filter(function (ele, i) {
+            console.log(ele.id);
+            return ele.id !== el.id;
         })
         localStorage.setItem('cart', JSON.stringify(x));
         showcart();
-        //   window.location.reload();
-
     }
 
 
@@ -948,19 +1126,21 @@
     function add() {
         let adding = [
             {
-                "id": "2",
+                "id": "42",
                 "Category": "cloth",
-                "gender": "Women",
-                "title": "WOMENS LACE FLORAL EVENING DRESS",
-                "description": ["Manufacturer: BCBGMAXAZRIA", "Material: 100% Polyester", "Fabric Type: Polyester"],
-                "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/eJGeOZ65cTRusiZtduE3OuzXbLRp7aVx-25_360x.jpg?v=1661163613",
-                "price": 155.99,
-                "strike_off": 468.00
+                "gender": "Kid",
+                "title": "NELLYSTELLA PEACH SILK-BLEND DRESS",
+                "description": ["Manufacturer: JS Collections", "Closure: Hidden Back Zipper", "Material: 100% Polyester", "Approximately 45In From Shoulder To Hem"],
+                "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1543133694_RLLZ_1_260ea824-d386-4972-95b3-ec56f52ba730_360x.jpg?v=1659584945",
+                "price": 74.99,
+                "strike_off": 85.00
             },
         ]
 
         localStorage.setItem('add', JSON.stringify(adding));
     }
 </script>
+
+
 
 </html>
