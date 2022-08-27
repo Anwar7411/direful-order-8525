@@ -909,11 +909,13 @@ append(filter_data);
 function fiter_prod_price(){
   let sort_val=document.getElementById("sort_price").value;
   if(sort_val==='All'){
+    head_line.innerText=(`All Clothing`)
     return main()
   }
   let filter_data=Products.filter((ele)=>{
     return ele.price<=sort_val && ele.Category==='cloth'
   })
+  head_line.innerText=(`All Clothing`)
   append(filter_data);
 }
 
