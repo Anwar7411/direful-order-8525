@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
 }
 #slide{
     margin-top: 10px;

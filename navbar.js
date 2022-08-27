@@ -98,7 +98,8 @@ function footer(){
             <a href="./home.html">  <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/Untitled_2_.png_5_x104@2x.png?v=1620852820" alt=""> </a>
         </div>
         <p class="copyright">© 2022 Bluefly 1998-2020 BLUEFLY.COM OR ITS AFFILIATES ALL RIGHTS RESERVED.</p>
-    </div>`
+    </div>
+</footer>`
 }
 
 export {navbar,footer}
