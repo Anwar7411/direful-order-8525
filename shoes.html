@@ -1,65 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>shoes page</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="clothing.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing page</title>
     <link rel="stylesheet" href="clothing.css">
-    <link rel="stylesheet" href="./navbar.css">
+    <link rel ="stylesheet" href="./navbar.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script src="https://kit.fontawesome.com/1ea9883031.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">   
 </head>
 <body>
-    <header>
-        <!-- <input type="checkbox" name="" id="chk1"> -->
-    <div id="navbar">
-        <div id="nav1">
-                
-                <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243" alt="">
     
-        </div> 
-            <div id="search">
-                
-                <input type="text" placeholder="Search our store" id="srch">
-               <button id="submit" type="submit"><i class="fa fa-search"></i> </button>
-               <i id="user" class="fas fa-user"></i>
-               <i id="bag" class="fa fa-shopping-bag"></i>
-            </div>     
-         
-     </div>
-     <div id="list">
-     <ul>
-        <li id="clear" ><a href="clothing.html"></a>CLOTHING</li>
-        <li id="clear" ><a href="shoes.html"></a>SHOES</li>
-        <li id="clear" ><a href="#"></a>HANDBAGS & ACCESSORIES</li>
-        <li id="clear" ><a href="#"></a>DESIGNERS</li>
-        <li id="clear" ><a href="#"></a>SUNGLASSES</li>
-        <li id="clear" ><a href="#"></a>JEWELRY & WATCHES</li>
-        <li id="clear" ><a href="#"></a>UNDER $50</li>
-        <li id="clear" ><a href="#"></a>BEAUTY</li>
-      </ul>  
-
-      <ul>
-        <li id="clear" style="color:red;margin-top:20px;margin-bottom: 30px">CLEARANCE</li>
-      </ul>
-    </div>
-        
-        
-       
-</header>
+        <div id="nav"></div>
     <div id="slide"></div>
-    <h1 id="head_line">All Clothing</h1>
-    <div id="container">
+    <h1 id="head_line">All Shoes</h1>
+    <div id="container_div">
         <div>
             <select id="sort_price" multiple="multiple" onchange="fiter_prod_price()">
                 <option value="All">Sort Based on Price</option>
@@ -69,6 +25,14 @@
             </select>
         </div>
         <div id="clothing"></div>
+    </div>    
+    <div id="foot"></div>
 </body>
 </html>
 <script src="shoes.js"></script>
+<script type="module">
+    import {navbar,footer} from './navbar.js';
+    let nav = document.getElementById("nav").innerHTML= navbar()
+
+    let foot = document.getElementById("foot").innerHTML = footer()
+</script>
