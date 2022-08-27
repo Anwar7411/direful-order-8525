@@ -209,7 +209,8 @@
             margin-left: 120px;
             width: 70%;
         }
-        #ramu a{
+
+        #ramu a {
             text-decoration: none;
             color: black;
         }
@@ -229,14 +230,16 @@
             display: flex;
             justify-content: space-between;
         }
-        #snow{
+
+        #snow {
             color: white;
             background-color: #545454;
             height: 50px;
             width: 80px;
             border: none;
         }
-        #peace{
+
+        #peace {
             height: 45px;
             width: 50%;
             font-size: .8em;
@@ -259,7 +262,9 @@
                 <a href="./navbar.html">
                     <p>cart </p>
                 </a>
-                <a href="./payment.html"><p>Information </p></a>
+                <a href="./payment.html">
+                    <p>Information </p>
+                </a>
                 <p>Shipping </p>
                 <p>Payment </p>
 
@@ -304,9 +309,9 @@
 
                 <p id="bch">Country/region</p>
                 <select name="" id="corn">
-                    <option value="">India</option>
-                    <option value="">USA</option>
-                    <option value="">UK</option>
+                    <option value="India">India</option>
+                    <option value="Usa">USA</option>
+                    <option value="Uk">UK</option>
                 </select>
 
 
@@ -321,9 +326,9 @@
                     <input type="text" id="city" placeholder="City">
                     <select name="" id="state">
                         <option value="">state</option>
-                        <option value="">Bihar</option>
-                        <option value="">UP</option>
-                        <option value="">Chhattisgarh</option>
+                        <option value="bihar">Bihar</option>
+                        <option value="up">UP</option>
+                        <option value="cg">Chhattisgarh</option>
                     </select>
                     <input type="text" id="code" placeholder="ZIP code">
                 </div>
@@ -337,8 +342,10 @@
                 <a href="">
                     <h5>Return to cart</h5>
                 </a>
-                <a href="./shipping.html"><button id="back">Continue to shipping</button></a>
+                <a href=""><button id="back" onclick="ship()">Continue to shipping</button></a>
             </div>
+
+            <!-- ./shipping.html -->
 
             <div id="raju">
                 <p>Refund Policy</p>
@@ -367,3 +374,5 @@
 </body>
 
 </html>
+
+<script src="shipping.js"></script>
