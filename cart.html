@@ -552,7 +552,7 @@
             <hr>
             <p id="subtotalwa"></p>
             <p id="para">Shipping, taxes, and discounts codes calculated at checkout.</p>
-            <button onclick="cartadding()">CHECK OUT</button>
+            <button id="cart_payment" onclick="cartadding()">CHECK OUT</button>
         </div>
     </div>
 
@@ -614,7 +614,7 @@
             "gender": "Men",
             "title": "MONCLER LAPPE VEST",
             "description": ["Manufacturer: JS Collections", "Closure: Hidden Back Zipper", "Material: 100% Polyester", "Approximately 45In From Shoulder To Hem"],
-            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1010391566_RLLZ_1_360x.jpg?v=1658861803",
+            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/98258374_large.jpg?v=1659100703",
             "price": 899.99,
             "strike_off": 1089.00
         },
@@ -666,7 +666,7 @@
             "gender": "Women",
             "title": "WOMENS EMBELLISHED TRUMPET EVENING DRESS",
             "description": ["Manufacturer: Aidan Mattox", "Style Type: Sheath", "Sleeve Length: Spaghetti Strap"],
-            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/eK7sZ5IVyl7NzVWHQJH3sYvsC4YX3Eq7-25_e16f1bc4-bb08-446d-8d26-a07b78c1523a_360x.jpg?v=1660095289",
+            "image": "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1411385099_RLLZ_2_large.jpg?v=1661486768",
             "price": 110.99,
             "strike_off": 150.00
         },
@@ -810,7 +810,7 @@
             cartbtn.addEventListener("click", function () {
                 addtocart(el);
                 // showcart();
-                popcart();
+                 popcart();
                 // displayRadioValue();
                 // displayRadioValueclr();
             });
@@ -1082,7 +1082,7 @@
                     totalam = totalam - Number(totalam);
                     totalamount.innerText = totalam;
                     subtotalwa.innerHTML = null;
-                    subtotalwa.append("SUBTOTAL : ", "$", totalamount);
+                    subtotalwa.append("SUBTOTAL : ", "$", totalamount.toFixed(2));
                     console.log(totalam);
                     count.innerText = c, totalam;
                     deletecart(el);
@@ -1092,7 +1092,7 @@
                     totalam = totalam - Number(el.price);
                     totalamount.innerText = totalam;
                     subtotalwa.innerHTML = null;
-                    subtotalwa.append("SUBTOTAL : ", "$", totalamount);
+                    subtotalwa.append("SUBTOTAL : ", "$", totalamount.toFixed(2));
                     console.log(totalam);
                 }
 
@@ -1196,6 +1196,11 @@
 
     //     localStorage.setItem('add', JSON.stringify(adding));
     // }
+
+    let cart_payment = document.getElementById("cart_payment");
+    cart_payment.addEventListener("click",function(){
+        window.location.href = "./payment.html"
+    })
 </script>
 
 

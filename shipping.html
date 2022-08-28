@@ -13,11 +13,12 @@
             margin-bottom: -120px;
             font-size: .8em;
             letter-spacing: .2em;
+            margin-top: 50px;
         }
 
         #tag1>img {
             text-align: center;
-            margin-left: 150px;
+            margin-left: 200px;
         }
 
         #main1 {
@@ -42,7 +43,7 @@
 
         #ptag1 {
             display: flex;
-            margin-left: 150px;
+            margin-left: 170px;
             gap: 10px;
         }
 
@@ -83,18 +84,23 @@
             color: white;
             background-color: black;
             height: 45px;
-            font-size: .8em;
-            letter-spacing: .2em;
-            margin-right: 93px;
+            font-size: .9em;
+            letter-spacing: 0.1rem;
+            margin-right: 20px;
+            margin-top: 15px;
             /* margin-left: -5px; */
         }
 
         #raju1 {
-            width: 60%;
+            width: 65%;
             margin-left: 120px;
             gap: 5px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
+        }
+        #raju1 p{
+            margin-left: 3px;
+            font-size: 10px;
         }
 
         #snow1 {
@@ -108,8 +114,8 @@
         #peace1 {
             height: 45px;
             width: 50%;
-            font-size: .8em;
-            letter-spacing: .2em;
+            font-size: 20px;
+            letter-spacing: 0px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
@@ -148,6 +154,13 @@
             border: 1px solid black;
             border-left: none;
         } */
+
+        #hitwomen{
+            margin-top: 20px;
+            margin-left: 160px;
+            color: black;
+            font-size: 25px;
+        }
     </style>
 </head>
 
@@ -223,12 +236,21 @@
                 <button id="snow1">Apply</button>
             </div>
 
-
+            <div id="hitwomen"></div>
         </div>
     </div>
+    
 
 </body>
 
 </html>
 
 <script src="shipping.js"></script>
+<script>
+    let hitwomen = document.getElementById("hitwomen");
+    function hitwomen_payment(){
+        let data = JSON.parse(localStorage.getItem("total"));
+        hitwomen.append("Sub Total: ","$",data)
+    }
+    hitwomen_payment()
+</script>
