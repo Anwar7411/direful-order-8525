@@ -1082,7 +1082,7 @@
                     totalam = totalam - Number(totalam);
                     totalamount.innerText = totalam;
                     subtotalwa.innerHTML = null;
-                    subtotalwa.append("SUBTOTAL : ", "$", totalamount.toFixed(2));
+                    subtotalwa.append("SUBTOTAL : ", "$", totalamount);
                     console.log(totalam);
                     count.innerText = c, totalam;
                     deletecart(el);
@@ -1092,7 +1092,7 @@
                     totalam = totalam - Number(el.price);
                     totalamount.innerText = totalam;
                     subtotalwa.innerHTML = null;
-                    subtotalwa.append("SUBTOTAL : ", "$", totalamount.toFixed(2));
+                    subtotalwa.append("SUBTOTAL : ", "$", totalamount);
                     console.log(totalam);
                 }
 

@@ -86,3 +86,8 @@ function view_arrival(){
  function view_trending(){
   window.location.href="clothing.html"
  }
+
+ let dresses = document.getElementById("dresses");
+ dresses.addEventListener("click",function(){
+  window.location.href ="./clothing.html"
+ })

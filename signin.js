@@ -11,7 +11,7 @@ let details=JSON.parse(localStorage.getItem("data"))
               if(Email==details[i].email && Password==details[i].password){
                  
                 alert("SuccesFull Login")
-                // window.location="index.html"
+                 window.location="./home.html"
               } else{
 
                 alert("Try Again")
