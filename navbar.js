@@ -10,7 +10,7 @@ function navbar(){
                 <input type="text" placeholder="Search our store" id="srch">
                <button id="submit" type="submit"><i class="fa fa-search"></i> </button>
                <a href="./signin.html"> <i style="color: black" id="user" class="fas fa-user"></i></a>
-               <a href="./cart.html"> <i style="color: black" id="bag" class="fa fa-shopping-bag"></i></a>
+               <i style="color: black" onclick="popcart()" id="bag" class="fa fa-shopping-bag"></i>
             </div>     
          
      </div>

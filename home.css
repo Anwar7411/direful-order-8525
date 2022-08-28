@@ -3,6 +3,10 @@ body{
     padding: 0px;
     overflow-x: hidden;
 }
+hr{
+    color: gray;
+    margin: 40px 0px;
+}
 #slide{
     margin-top: 15px;
     background-color: black;
@@ -14,6 +18,14 @@ body{
     padding-bottom: 10px;
     transform: translateX(100%);
     animation: slide_text 15s linear infinite;
+}
+@keyframes slide_text{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
 }
 #main{
     width: 100%;
@@ -41,14 +53,14 @@ body{
     text-decoration: none;
 }
 #left{
-    top: 250px;
+    top: 500px;
     left:10px;
     position: absolute;
 }
 #right {
     right: 10px;
     position: absolute;
-    top: 250px;
+    top: 500px;
     
 }
 #left:hover, #right:hover {
@@ -110,6 +122,8 @@ body{
     height: 100%;
 }
 h1{
+    margin-top: 30px;
+    margin-bottom: 20px;
     text-align: center;
     font-family: Tiemann,serif;
     font-weight: 400;
@@ -126,11 +140,12 @@ h1{
 }
 #cat div{
     text-align: center;
+    margin-bottom: 30px;
 }
 #cat img, #new_arrivals img, #trending_now img{
 
     width: 60%;
-    height: 50%;
+    height: 70%;
 }
 
 
@@ -171,6 +186,7 @@ h1{
     padding: 10px;
     display: block;
     border: 0px;
+    margin-bottom: 10px;
 }
 
 

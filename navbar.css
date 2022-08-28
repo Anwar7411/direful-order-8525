@@ -11,15 +11,17 @@ header{
     width: 100%;
     /* height: auto; */
     margin-top: 20px;
+    margin-bottom: 15px;
     
 } 
 #nav1{
     display: flex;
+    margin-left: 50px;
     
 }
 #nav1>a{
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     margin-left: 550px;
     width: 30%;
     height: 35px;
@@ -120,15 +122,20 @@ header{
 }
 #shop{
    
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    
     margin-top: 50px;
     margin-left: 20px;
     margin-right: 20px;
     gap: 20px;
     
 
+}
+#shop img{
+    height: 350px;
+    width: 450px;
 }
 #denim{
      
@@ -137,11 +144,11 @@ header{
 }
 #jumpsuits{
     text-align: center;
-    margin-top: 20px;
+    
 }
 #acces{
     text-align: center;
-    margin-top: 0px;
+   
 }
 #acces>h4{
     margin-left: 20px;
@@ -167,8 +174,8 @@ header{
 }
 .container{
     width: 1170px;
-    
-    
+    margin-left: 250px;
+    padding-bottom: 10px;
 }
 .row{
     display: flex;
@@ -246,7 +253,7 @@ ul{
 }
 .footer-bluefly img{
     display: block;
-  margin-left: auto;
+  margin-left: 400px;
   margin-right: auto;
   width: 20%;
   height: 100px;
@@ -256,4 +263,5 @@ ul{
     text-align: center;
     margin-top: 30px;
     margin-bottom: 50px;
+    margin-left: -80px;
 }

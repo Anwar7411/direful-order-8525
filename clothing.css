@@ -22,13 +22,14 @@ animation: slide_text 15s linear infinite;
 #head_line{
     text-align: center;
     font-family: Tiemann,serif;
-    font-weight: 400;
-    letter-spacing: 0em;
+    font-weight: 450;
+    letter-spacing: 0.1em;
     line-height: 1;
-    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 #container_div{
-    width: 70%;
+    width: 80%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -51,7 +52,7 @@ margin-right: 60px;
 #clothing>div{
     text-align: center;
 
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
     padding: 5px;
     font-family: Futura,sans-serif;
     letter-spacing: .025em;
@@ -59,7 +60,7 @@ margin-right: 60px;
     cursor: pointer;
 }
 #clothing>div:hover{
-    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
 }
 #sort_price{
