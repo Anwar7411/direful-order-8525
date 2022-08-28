@@ -10,7 +10,7 @@
         body {
             color: #545454;
             background: white;
-            padding-top: 20px;
+            margin-bottom: -120px;
             font-size: .8em;
             letter-spacing: .2em;
         }
@@ -25,17 +25,17 @@
             display: flex;
             height: 600px;
 
-            
+
         }
 
         #left1 {
-            
+
             height: 200%;
             width: 50%;
         }
 
         #right1 {
-            
+
             height: 200%;
             width: 50%;
         }
@@ -76,19 +76,21 @@
         #ramu1 a {
             text-decoration: none;
             color: black;
+            
         }
 
         #back1 {
             color: white;
             background-color: black;
-            height: 50px;
+            height: 45px;
             font-size: .8em;
             letter-spacing: .2em;
-            margin-left: -45px;
+            margin-right: 93px;
+            /* margin-left: -5px; */
         }
 
         #raju1 {
-            width: 70%;
+            width: 60%;
             margin-left: 120px;
             gap: 5px;
             display: flex;
@@ -110,6 +112,42 @@
             letter-spacing: .2em;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
+
+        #contact {
+            display: flex;
+            gap: 15px;
+            border: 1px solid black;
+            height: 44px;
+            width: 480px;
+            padding-left: 10px;
+            /* border-right: none; */
+
+        }
+
+        #ship {
+            padding-left: 120px;
+
+        }
+
+        /* #contact>p:nth-child(3){
+            border: 1px solid black;
+            height: 24px;
+             margin-top: -1px; 
+            padding: 10px;
+            margin-left: -14px;
+            margin-top: -1px;
+            border-left: none;
+       } */
+
+
+
+        /* #contact>button{
+            border: none;
+           
+            background-color: white;
+            border: 1px solid black;
+            border-left: none;
+        } */
     </style>
 </head>
 
@@ -123,14 +161,33 @@
 
 
             <div id="ptag1">
-                <a href="./navbar.html">
+                <a href="./cart.html">
                     <p>cart </p>
                 </a>
                 <a href="./payment.html">
                     <p>Information </p>
                 </a>
-                <p>Shipping </p>
-                <p>Payment </p>
+                <a href="./shipping.html">
+                    <p>Shipping </p>
+                </a>
+                <a href="./success.html">
+                    <p>Payment </p>
+                </a>
+
+            </div>
+
+            <div id="ship">
+                <div id="contact">
+                    <p> Contact</p>
+                    <p id="mail"> </p>
+                    <p id="change">Change</p>
+                </div>
+                <br> <br>
+                <div id="contact">
+                    <p>Contact</p>
+                    <p id="add"></p>
+                    <p id="change1">Change</p>
+                </div>
 
             </div>
 
@@ -156,6 +213,10 @@
         </div>
 
         <div id="right1">
+
+            <div id="hitman">
+
+            </div>
 
             <div id="cart1">
                 <input type="text" id="peace1" placeholder="Gift card or discount code">
