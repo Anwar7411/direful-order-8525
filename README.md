@@ -1,7 +1,8 @@
-# direful-order-8525
 
 <div>
 <h2 align="left">Blue fly clone</h2>
+<h4>Tech-Stacks : HTML |  CSS  |  Javascript </h2>
+<p>E-commerce website where users can buy products such as clothing, shoes, handbags, watches etc.</p>
   </br>
 <span>&nbsp;<img align="left" width="300px" alt="picture of coder" src="https://github.com/Abhi11sep/Abhi11sep/blob/main/blue%20fly.gif"/></span>
 <h4 align="right">&nbsp;This website is deployed on Netlify  &nbsp;<a align="right" href="https://snazzy-blini-1ddf84.netlify.app/"/>Deployed Link</a></h4>
