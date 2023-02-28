@@ -5,34 +5,16 @@ E-commerce website where users can buy products such as clothing, shoes, handbag
 
 ---
 
-<div height="400px">
- <span>&nbsp;<img align="left" width="300px" alt="picture of coder" src="https://github.com/Abhi11sep/Abhi11sep/blob/main/blue%20fly.gif"/></span>
-<h4 align="right">&nbsp;This website is deployed on Netlify  &nbsp;<a align="right" href=""/>Deployed Link</a></h4>
-</div>
 
-
-
-
-
-
-
-
-
-
-
-
+<!-- <span>&nbsp;<img align="left" width="300px" alt="picture of coder" src="https://github.com/Abhi11sep/Abhi11sep/blob/main/blue%20fly.gif"/></span>
+<h4 align="right">&nbsp;This website is deployed on Netlify  &nbsp;<a align="right" href=""/>Deployed Link</a></h4> -->
 
 
 ---
 
-
-
-
-
-
 <h3>Features :</h3>
 <h5>✨Home Page with Navbar and Footer</h5>
-<h5>✨Authentication</h5>
+<h5>✨Login & Sign-up</h5>
 <h5>✨Filter and sort products by rating and price</h5>
 <h5>✨Single Product Page</h5>
 <h5>✨Cart page</h5>
