@@ -1,38 +1,13 @@
-
-<div>
-<h2 align="left">Blue fly clone</h2>
-<h4>Tech-Stacks : HTML |  CSS  |  Javascript </h2>
-<p></p>
-  </br>
-<span>&nbsp;<img align="left" width="300px" alt="picture of coder" src="https://github.com/Abhi11sep/Abhi11sep/blob/main/blue%20fly.gif"/></span>
-<h4 align="right">&nbsp;This website is deployed on Netlify  &nbsp;<a align="right" href=""/>Deployed Link</a></h4>
-
-<h4 align="right">&nbsp;Link of the project Repository &nbsp;<a href="https://github.com/Anwar7411/direful-order-8525">GitHub Link</a></h4>
-
-<h6 align="right">E-commerce website</h6>
-
-<!-- <p  align="right">Sign-in/Sign-up  |  Home page  |  product page with multiple filters  |  Cart page  |  confirmation and payment </p> -->
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
- <h1>BlueFly Clone</h1>
+<h1>BlueFly Clone</h1>
  
- <h3>Description :</h3>
+<h3>Description :</h3>
 E-commerce website where users can buy products such as clothing, shoes, handbags, watches etc.
 
-<h2>Deployed Link</h2>
-https://snazzy-blini-1ddf84.netlify.app/
+<h4>Tech-Stacks : HTML |  CSS  |  Javascript </h4>
+
+
+<span>&nbsp;<img align="left" width="300px" alt="picture of coder" src="https://github.com/Abhi11sep/Abhi11sep/blob/main/blue%20fly.gif"/></span>
+<h4 align="right">&nbsp;This website is deployed on Netlify  &nbsp;<a align="right" href=""/>Deployed Link</a></h4>
 
 <h2>Team Members</h2>
 1.Anwar Basha(Leader) <br>
