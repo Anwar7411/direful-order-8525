@@ -39,42 +39,27 @@ E-commerce website where users can buy products such as clothing, shoes, handbag
 ---
 
 <!-- <h3>Some Glimps of Project :</h3>
-<h5>✨Home Page with Navbar and Footer</h5>
-![Screenshot (187)](https://user-images.githubusercontent.com/107553043/213978937-9e0bc306-a293-450c-8fdf-cc585efb4df9.png)
-![Screenshot (188)](https://user-images.githubusercontent.com/107553043/213978944-0b094a98-9a3f-4257-945a-a0ee148f0dba.png)
-![Screenshot (184)](https://user-images.githubusercontent.com/107553043/213978948-a69712e9-1585-4dbd-ac7f-e2259222e40f.png)
-![Screenshot (185)](https://user-images.githubusercontent.com/107553043/213978950-75a42da5-f30b-4b8d-ad9a-b8ff9ef78dc0.png)
-![Screenshot (186)](https://user-images.githubusercontent.com/107553043/213978951-792b7725-5a3b-466a-a74e-065e4c907040.png)
-
-
-![image](https://user-images.githubusercontent.com/107463246/221772169-de88e1aa-f509-4148-a80d-e47bb2f5d765.png)
-
-![image](https://user-images.githubusercontent.com/107463246/221772511-1addb93c-c56d-41b2-b3c3-528edbbe6d7e.png)
-
-![image](https://user-images.githubusercontent.com/107463246/221772868-c77c1637-a429-4512-af90-5ee34d05f383.png)
-![image](https://user-images.githubusercontent.com/107463246/221773263-f6c3113d-ace2-4366-b890-653b0aa32e66.png)
+![Screenshot (3)](https://user-images.githubusercontent.com/107463246/221780846-9a63f4ec-f701-42a6-9e71-93530e872fa4.png)
+![Screenshot (4)](https://user-images.githubusercontent.com/107463246/221781157-17d9e377-17fc-4bf5-91f1-1377a0c70d0c.png)
+![Screenshot (5)](https://user-images.githubusercontent.com/107463246/221781360-d81e8e96-fab7-4625-9266-d34ce2e6702a.png)
+![Screenshot (6)](https://user-images.githubusercontent.com/107463246/221781487-16dc7bc5-21e3-4632-bc7f-0d381c7fa2d7.png)
+![Screenshot (7)](https://user-images.githubusercontent.com/107463246/221781602-a54ed382-4dc1-47f0-a51f-1129d9eca66d.png)
 
 -->
-![WhatsApp Image 2023-02-28 at 12 22 46](https://user-images.githubusercontent.com/107463246/221777027-fa672e39-af93-4d2b-b10c-210148b29d62.jpg)
 
 <h5>✨Landing Product</h5>
-<img src="https://user-images.githubusercontent.com/107463246/221771987-a7b71a16-41d8-4be3-bbd1-3a1b1556ea50.png"/>
+<img src="https://user-images.githubusercontent.com/107463246/221780846-9a63f4ec-f701-42a6-9e71-93530e872fa4.png"/>
 
 <h5>✨Product Page</h5>
-<img src="https://user-images.githubusercontent.com/107463246/221772169-de88e1aa-f509-4148-a80d-e47bb2f5d765.png"/>
+<img src="https://user-images.githubusercontent.com/107463246/221781157-17d9e377-17fc-4bf5-91f1-1377a0c70d0c.png"/>
 
 <h5>✨Login page</h5>
-<img src="https://user-images.githubusercontent.com/107463246/221772511-1addb93c-c56d-41b2-b3c3-528edbbe6d7e.png"/>
+<img src="https://user-images.githubusercontent.com/107463246/221781360-d81e8e96-fab7-4625-9266-d34ce2e6702a.png"/>
 
 <h5>✨Cart page</h5>
-<img src="https://user-images.githubusercontent.com/107463246/221772868-c77c1637-a429-4512-af90-5ee34d05f383.png" />
+<img src="https://user-images.githubusercontent.com/107463246/221781487-16dc7bc5-21e3-4632-bc7f-0d381c7fa2d7.png" />
 
 <h5>✨Payment page</h5>
-<img src="https://user-images.githubusercontent.com/107463246/221773263-f6c3113d-ace2-4366-b890-653b0aa32e66.png"/>
-
-https://user-images.githubusercontent.com/107463246/221777027-fa672e39-af93-4d2b-b10c-210148b29d62.jpg
-
-<img src="https://user-images.githubusercontent.com/107463246/221777027-fa672e39-af93-4d2b-b10c-210148b29d62.jpg
-"/>
+<img src="https://user-images.githubusercontent.com/107463246/221781602-a54ed382-4dc1-47f0-a51f-1129d9eca66d.png"/>
 
 
