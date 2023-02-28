@@ -6,14 +6,7 @@ E-commerce website where users can buy products such as clothing, shoes, handbag
 <span>&nbsp;<img align="left" width="300px" alt="picture of coder" src="https://github.com/Abhi11sep/Abhi11sep/blob/main/blue%20fly.gif"/></span>
 <h4 align="right">&nbsp;This website is deployed on Netlify  &nbsp;<a align="right" href=""/>Deployed Link</a></h4>
 
-<h2>Team Members</h2>
-1.Anwar Basha(Leader) <br>
-2.Rajesh Ranjan <br>
-3.Abhishek Singh <br>
-4.Chanchal Soni <br>
-5.veluri Rahul <br>
- 
- ---
+  ---
 
 <h3>Tech Stack Used :</h3>
 <h5>⚡Html</h5>
