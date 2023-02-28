@@ -55,6 +55,7 @@ E-commerce website where users can buy products such as clothing, shoes, handbag
 ![image](https://user-images.githubusercontent.com/107463246/221773263-f6c3113d-ace2-4366-b890-653b0aa32e66.png)
 
 -->
+![WhatsApp Image 2023-02-28 at 12 22 46](https://user-images.githubusercontent.com/107463246/221777027-fa672e39-af93-4d2b-b10c-210148b29d62.jpg)
 
 <h5>✨Landing Product</h5>
 <img src="https://user-images.githubusercontent.com/107463246/221771987-a7b71a16-41d8-4be3-bbd1-3a1b1556ea50.png"/>
@@ -70,5 +71,10 @@ E-commerce website where users can buy products such as clothing, shoes, handbag
 
 <h5>✨Payment page</h5>
 <img src="https://user-images.githubusercontent.com/107463246/221773263-f6c3113d-ace2-4366-b890-653b0aa32e66.png"/>
+
+https://user-images.githubusercontent.com/107463246/221777027-fa672e39-af93-4d2b-b10c-210148b29d62.jpg
+
+<img src="https://user-images.githubusercontent.com/107463246/221777027-fa672e39-af93-4d2b-b10c-210148b29d62.jpg
+"/>
 
 
