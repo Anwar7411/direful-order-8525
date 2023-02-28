@@ -5,8 +5,10 @@ E-commerce website where users can buy products such as clothing, shoes, handbag
 
 ---
 
-<span>&nbsp;<img align="left" width="300px" alt="picture of coder" src="https://github.com/Abhi11sep/Abhi11sep/blob/main/blue%20fly.gif"/></span>
+<div height="400px">
+ <span>&nbsp;<img align="left" width="300px" alt="picture of coder" src="https://github.com/Abhi11sep/Abhi11sep/blob/main/blue%20fly.gif"/></span>
 <h4 align="right">&nbsp;This website is deployed on Netlify  &nbsp;<a align="right" href=""/>Deployed Link</a></h4>
+</div>
 
 
 
